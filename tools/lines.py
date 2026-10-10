@@ -9,8 +9,9 @@ from build_data import parse_script  # noqa
 
 VOICES = {'N': 78, 'Q': 78, 'W': 80}          # Artlist: Nora = Resonance, Wes = Keen
 SAY = {                                        # pronunciation help for the voice model only
-    'de Morès': 'de Mo-RESS', 'Morès': 'Mo-RESS', 'Tolstoi': 'Tolstoy', "'Anna Karenina,'": 'Anna Karenina,',
-    'porcupette': 'por-kyoo-PET', 'coteries': 'KOH-tuh-reez', 'maltee': 'MAWL-tee', 'Snøhetta': 'SNUH-het-tah',
+    'Marquis de Morès': 'mar-KEE duh mo-RESS', 'The Marquis': 'The mar-KEE', 'the Marquis': 'the mar-KEE',
+    'de Morès': 'duh mo-RESS', 'Morès': 'Mo-RESS', 'Tolstoi': 'Tolstoy', "'Anna Karenina,'": 'Anna Karenina,',
+    'porcupette': 'por-kyoo-PET', 'coteries': 'KOH-tuh-reez', 'maltee': 'MAWL-tee', 'Snøhetta': 'SNOW-het-tah',
 }
 def tts_text(t):
     for a, b in SAY.items():

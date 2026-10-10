@@ -101,6 +101,65 @@ def simplify(coords, tol_m=4.0):
             stack += [(i, idx), (idx, j)]
     return [c for c, k in zip(coords, keep) if k]
 
+# ---------------------------------------------------------------- photos follow the narration
+# Each clip's photos change when the narration gets to what they show. A photo is matched to the first
+# line (at or after the previous photo's line) that mentions one of its keywords; photos with no match
+# are spread evenly between their neighbours.
+PHOTO_WORDS = {
+    'visitor-center': ['visitor center', 'welcome', 'badlands'], 'maltese-cross-cabin': ['cabin', 'maltese'],
+    'dam-maltese-cross-ranch-1884': ['ranch', 'cabin', 'maltese', 'lived'], 'dam-maltese-cross-cabin-kitchin': ['cabin', 'tour', 'moved', 'traveled'],
+    'medora-from-park': ['medora', 'town'], 'dam-medora-from-butte-1900': ['medora', 'station', 'train'],
+    'marquis-de-mores-portrait': ['marquis', 'frenchman'], 'medora-von-hoffman-marquise-portrait': ['wife', 'medora von', 'named'],
+    'de-mores-packing-plant-smokestack': ['packing', 'meatpacking', 'plant', 'smokestack'],
+    'dam-plains-river-tr': ['river', 'roosevelt', 'ranch'], 'little-missouri-river': ['river', 'little missouri'],
+    'porcupine': ['porcupine'], 'cottonwood': ['cottonwood', 'trees'],
+    'dam-elkhorn-from-river': ['elkhorn', 'second ranch'], 'dam-elkhorn-ranch-1886': ['logs', 'cottonwood', 'cutting', 'build'],
+    'dam-dow-tr-sewall-1886': ['sewall', 'dow', 'lumberjack'], 'dam-ranch-wives-manitou': ['beaver'], 'dam-elkhorn-opposite-butte': ['autobiography', 'tree chewed'],
+    'elkhorn-ranch-grand-view': ['elkhorn'],
+    'dam-sewall-dow-boat-staged': ['boat', 'float'], 'dam-boat-thieves-staged': ['catch', 'thieves', 'prisoners', 'guarding', 'outlaws'],
+    'elkhorn-ranch-winter-buttes': ['ice', 'freezing', 'cold'],
+    'dam-tr-roundup-1885': ['rancher', 'ranching', 'any good'], 'dam-roundup-outfit': ['respected', 'stockmen', 'association'],
+    'dam-ferris-roundup-1883': ['chairman', 'new york'], 'dam-ranch-roundup-1885': ['loved the work', 'cattle ranch', 'life'],
+    'dam-landing-cow-elk-1885': ['gone', 'late 1800s', 'hunted'], 'elk-fall-harem': ['elk', 'came back', '1985'], 'elk-bull': ['bugl', 'bulls', 'sunset'],
+    'trpl-green-roof-aerial': ['presidential library', 'grass', 'building'], 'trpl-building-front': ['architects', 'snøhetta', 'front door', 'rammed earth', 'inside'],
+    'trpl-roof-walk': ['roof', 'walk right up'], 'dam-dickinson-medora-1900': ['dickinson', 'rail', 'train'],
+    'tr-1885-buckskin-portrait': ['roosevelt', 'he ', 'his '], 'tr-1885-buckskin-full-length': ['roosevelt', 'he '],
+    'bison': ['bison', 'buffalo'], 'wild-horses': ['horse', 'stallion', 'herd'], 'prairie-dog': ['prairie dog'],
+    'pronghorn': ['pronghorn'], 'mule-deer': ['mule deer', 'deer'], 'white-tailed': ['white-tail', 'whitetail'],
+    'coyote': ['coyote'], 'golden-eagle': ['eagle'], 'wild-turkey': ['turkey'], 'sharp-tailed-grouse': ['grouse'],
+    'american-badger': ['badger'], 'western-meadowlark': ['meadowlark'], 'wind-canyon': ['wind canyon', 'canyon', 'wind'],
+    'scoria': ['scoria', 'clinker', 'red'], 'clinker-buttes': ['clinker', 'red cap', 'buttes'], 'coal-vein': ['coal', 'burn'],
+    'peaceful-valley-ranch-house': ['ranch', 'house'], 'peaceful-valley-ranch-1928-camp-wagon': ['dude', 'guest', 'wagon', '1920'],
+    'peaceful-valley-ranch-complex': ['buildings', 'corral', 'horses'], 'old-east-entrance-station': ['ccc', 'stone', 'entrance', 'civilian'],
+    'boicourt': ['boicourt', 'view'], 'buck-hill': ['buck hill', 'highest', 'view'], 'badlands-overlook': ['overlook', 'layers'],
+    'petrified-wood': ['petrified', 'hoodoo'], 'scenic-loop-drive': ['road', 'loop', 'drive'], 'wind-canyon-sunset': ['sunset', 'night', 'stars'],
+}
+def photo_words(name, title):
+    words = []
+    for k, v in PHOTO_WORDS.items():
+        if name == k or name.startswith(k):
+            words += v
+    return words
+def align_images(clips, photos):
+    for c in clips.values():
+        imgs = c.get('images') or []
+        lines = [((l.get('t') or '') + ' ').lower() for l in c['lines']]
+        n = len(lines)
+        if len(imgs) < 2 or n < 2:
+            continue
+        at = [None] * len(imgs); at[0] = 0; lo = 0
+        for k in range(1, len(imgs)):
+            ws = photo_words(imgs[k], (photos.get(imgs[k]) or {}).get('title') or '')
+            hit = next((i for i in range(lo + 1, n) if any(w in lines[i] for w in ws)), None) if ws else None
+            if hit is not None:
+                at[k] = lo = hit
+        # fill the gaps evenly, keeping order
+        known = [(0, 0)] + [(k, a) for k, a in enumerate(at) if a is not None and k] + [(len(imgs), n)]
+        for (k0, a0), (k1, a1) in zip(known, known[1:]):
+            for k in range(k0 + 1, k1):
+                at[k] = min(n - 1, a0 + round((a1 - a0) * (k - k0) / (k1 - k0)))
+        c['imageAt'] = at
+
 # ---------------------------------------------------------------- load inputs
 def main(RESEARCH, MEDIA):
 
@@ -259,7 +318,7 @@ def main(RESEARCH, MEDIA):
         'story-night-sky': ['wind-canyon-sunset'],
         'rebuilt-road': ['scenic-loop-drive-scenery', 'scenic-loop-drive-bull-bison'],
         'closing': ['tr-1885-buckskin-portrait', 'dam-dickinson-medora-1900', 'trpl-green-roof-aerial'],
-        'skyline-parked': ['trpl-green-roof-aerial', 'trpl-building-front', 'trpl-roof-walk', 'little-missouri-river-1'],
+        'skyline-parked': ['little-missouri-river-1', 'trpl-green-roof-aerial', 'trpl-building-front', 'trpl-roof-walk'],
         'welcome': ['visitor-center', 'scenic-loop-drive-scenery'],
         'wild-bison': ['bison-prairie-stroll', 'scenic-loop-drive-bull-bison'],
         'wild-horses': ['wild-horses-greys', 'wild-horses-south-unit'],
@@ -386,6 +445,7 @@ def main(RESEARCH, MEDIA):
         'sounds': sounds,
         'hosts': {'N': {'name': 'Nora', 'voice': 'Resonance'}, 'W': {'name': 'Wes', 'voice': 'Keen'}},
     }
+    align_images(clips, photos)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     json.dump(tour, open(OUT, 'w'), separators=(',', ':'), ensure_ascii=False)
     print('clips', len(clips), 'stops', len(stops), 'route pts', len(route), 'total mi', round(TOTAL / MI, 2), 'junction', round(j_out / MI, 2), round(j_in / MI, 2))

@@ -1,6 +1,6 @@
 /* Offline support: cache-first for everything the tour uses. The page itself fills the
    cache when you tap "Download the tour"; this worker serves from it when there is no signal. */
-const SHELL = 'trnp-shell-42e4d0ec';
+const SHELL = 'trnp-shell-3dee087d';
 const SHELL_FILES = ['./', 'index.html', 'css/app.css', 'js/app.js', 'data/tour.json', 'fonts/fonts.css', 'manifest.webmanifest'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(SHELL).then(c => c.addAll(SHELL_FILES)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', (e) => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith('trnp-shell-') && k !== SHELL).map(k => caches.delete(k)))).then(() => self.clients.claim())); });

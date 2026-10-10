@@ -186,7 +186,7 @@ function playClip(id, { priority = 0, onDone } = {}) {
 function finish(job) {
   if (job.cancelled) return;
   S.current = null; S.lastEnd = now();
-  render.caption(null);
+  render.caption(null); render.resumeRotation();
   if (job.onDone) job.onDone();
   if (S.paused && !S.queue.length) { const p = S.paused; S.paused = null; resume(p); }
 }
@@ -196,7 +196,7 @@ function playFile(job) {
   audioEl.onended = () => finish(job);
   audioEl.ontimeupdate = () => {
     const t = audioEl.currentTime; const cue = (a.cues || []).filter(c => c.t <= t).pop();
-    if (cue && cue !== job.cue) { job.cue = cue; job.lineIdx = cue.i; render.caption(job.clip.lines[cue.i]); }
+    if (cue && cue !== job.cue) { job.cue = cue; job.lineIdx = cue.i; render.caption(job.clip.lines[cue.i]); render.syncPhoto(job); }
   };
   audioEl.onerror = () => { if (job.cancelled) return; job.clip.audio = null; playLines(job); };
   job.fileStarted = now();
@@ -222,7 +222,7 @@ function playLines(job) {
     if (job.cancelled) return;
     if (job.lineIdx >= lines.length) return finish(job);
     const l = lines[job.lineIdx];
-    render.caption(l);
+    render.caption(l); render.syncPhoto(job);
     const next = () => { job.lineIdx++; setTimeout(step, 250 / (TEST ? 20 : 1)); };
     if (l.s === 'SFX') return playSfx(S.tour.sounds[l.ref].file, next);
     if (l.s === 'TRV') return playSfx(S.tour.trv[l.ref].file, next);
@@ -349,7 +349,7 @@ function tick() {
   }
   // back in the car: driving speed held for a few seconds (GPS jumps while walking don't count)
   if (S.parkedAt && spd > 9) { if (!S.driveSince) S.driveSince = t; } else S.driveSince = 0;
-  if (S.parkedAt && S.driveSince && t - S.driveSince > 4) onUnparked(t);
+  if (S.parkedAt && S.driveSince && t - S.driveSince > 3) onUnparked(t);
 
   // ---- slowdown → wildlife picker
   if (spd > CFG.slowFrom) S.slowArmed = true;
@@ -381,6 +381,7 @@ function tick() {
   if (!S.current && !S.queue.length && !S.parkedAt && t - S.lastEnd > CFG.minGapS + 4 && spd > 3) maybeStory(ups);
 
   pump();
+  if (S.parkedAt && S.panelPending && !S.current && !S.queue.length && now() - S.lastEnd > 3) render.openPanel(false);
   render.tick(ups);
 }
 
@@ -547,7 +548,12 @@ function startSim() {
       if (i >= path.length - 1) { clearInterval(S.sim); feedSpeed(0); tick(); return; }
       S.simT += dt;
       let target = path[i].mph;
-      if (hold > 0) { hold -= dt; target = 0; }
+      if (S.simHoldExtra) { hold = Math.max(hold, S.simHoldExtra); S.simHoldExtra = 0; }
+      if (hold > 0) {
+        hold -= dt; target = 0;
+        // a pretend driver stays put until the stop's narration is done
+        if (hold <= 0 && S.parkedAt && (S.current || S.queue.length || S.panelPending)) hold = dt;
+      }
       else if (slowLeft > 0) { slowLeft -= dt; target = 2; }
       else if (fastLeft > 0) { fastLeft -= dt; target += 14; }
       else if (opts.wild && Math.random() < 0.0005) slowLeft = 18;
@@ -598,7 +604,12 @@ const render = {
   },
   clipStarted(job) {
     const c = job.clip;
-    if (c.images && c.images.length) this.setPhotos(c.images);
+    if (S.parkedAt && !$('parked').hidden && !S.panelManual) { $('parked').hidden = true; S.panelPending = true; $('btn-explore').hidden = false; }
+    if (c.images && c.images.length) {
+      this.setPhotos(c.images);
+      // photos follow the narration: no timed rotation while this clip plays
+      if (c.imageAt) { clearInterval(S.photoTimer); S.photoCue = job; this.syncPhoto(job); }
+    }
     const k = c.kind || '';
     if (k.startsWith('stop') || k === 'nav' || k === 'start' || k === 'end' || k === 'story' || k === 'wildlife') {
       $('place-name').textContent = c.title;
@@ -606,6 +617,16 @@ const render = {
       $('place-meta').textContent = k === 'story' ? 'Story' : k === 'wildlife' ? 'Wildlife' : st ? st.name : '';
     }
     if (c.visual === 'bisonchart' && S.parkedAt == null) this.inlineViz(vizBison());
+  },
+  syncPhoto(job) {
+    const c = job.clip; if (!c.imageAt || S.photoCue !== job && S.photoCue?.id !== job.id) return;
+    let k = 0; c.imageAt.forEach((a, i) => { if (a <= (job.lineIdx || 0)) k = i; });
+    const name = c.images[k], idx = S.photos.indexOf(name);
+    if (idx >= 0 && idx !== S.photoIdx) { S.photoIdx = idx; this.showPhoto(); }
+  },
+  resumeRotation() {
+    S.photoCue = null; clearInterval(S.photoTimer);
+    if (S.photos.length > 1) S.photoTimer = setInterval(() => { S.photoIdx = (S.photoIdx + 1) % S.photos.length; this.showPhoto(); }, 14000);
   },
   inlineViz(html) { /* shown in parked panel or dialog only, to keep the driving screen calm */ },
   caption(line) {
@@ -692,8 +713,12 @@ const render = {
     for (const st of T.stops) { if (st.kind !== 'pulloff') continue; const tp = stopTp(st); if (tp == null) continue; html.push(`<i style="left:${(tp / tot * 100).toFixed(2)}%"></i>`); }
     $('ribbon-ticks').innerHTML = html.join('');
   },
+  // Arriving at a stop: the narration keeps the photos on screen. The things-to-do panel waits until
+  // the talking is done (or until you tap "Explore"), so a stop feels like a stop, not a menu.
   parked(st) {
-    $('parked').hidden = false;
+    $('parked').hidden = true; S.panelPending = true; S.panelManual = false;
+    document.body.classList.add('stopped');
+    const ex = $('btn-explore'); ex.textContent = (st.id === 'generic' ? 'Explore' : 'Explore ' + st.name) + ' ›'; ex.hidden = false;
     $('parked-title').textContent = st.name;
     const tabs = [];
     if (st.onfoot) tabs.push(['On foot', () => `<p>${st.onfoot}</p>${st.restroom ? '<p>Restrooms here.</p>' : ''}${st.id === 'visitor-center' ? '' : '<p>Stay at least 25 yards from all wildlife. If an animal moves away from you, you are too close.</p>'}`]);
@@ -711,7 +736,13 @@ const render = {
       nav.appendChild(b); if (i === 0) b.click();
     });
   },
-  unparked() { $('parked').hidden = true; },
+  openPanel(manual) {
+    if (!S.parkedAt) return;
+    $('parked').hidden = false; $('btn-explore').hidden = true; S.panelPending = false; S.panelManual = !!manual;
+    if (S.mode === 'sim' && !manual) S.simHoldExtra = 12; // linger a moment on the stop's panel
+  },
+  closePanel() { $('parked').hidden = true; S.panelPending = false; if (S.parkedAt) $('btn-explore').hidden = false; },
+  unparked() { $('parked').hidden = true; $('btn-explore').hidden = true; S.panelPending = false; document.body.classList.remove('stopped'); },
   walking(on) { document.body.classList.toggle('walking', on); const n = $('parked-walk'); if (n) n.hidden = !on; },
 };
 function fmtMi(d) { return d < 0.1 ? 'here' : d < 10 ? d.toFixed(1) + ' mi' : Math.round(d) + ' mi'; }
@@ -837,7 +868,8 @@ async function boot() {
   $('btn-start').onclick = () => begin('gps');
   $('btn-preview').onclick = () => begin('sim');
   $('link-credits').onclick = (e) => { e.preventDefault(); showDialog(creditsHtml()); };
-  $('parked-close').onclick = () => { $('parked').hidden = true; };
+  $('parked-close').onclick = () => render.closePanel();
+  $('btn-explore').onclick = () => render.openPanel(true);
   $('photo-credit').onclick = () => { const n = S.photos[S.photoIdx], c = S.tour.photos[n] || {}; showDialog(`<h3>${c.title || ''}</h3>${c.date ? `<p>${c.date}</p>` : ''}<p class="fine">${c.credit || ''}. ${c.license || ''}.</p><p><a href="${c.url}" target="_blank" rel="noopener">Source</a></p>`); };
   $('btn-pause').onclick = () => {
     S.userPaused = !S.userPaused; $('btn-pause').textContent = S.userPaused ? '▶' : '❚❚';
