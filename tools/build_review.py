@@ -20,6 +20,15 @@ def fmt_line(l):
     name = T['hosts'][s]['name']
     return f'<li class="ln {s}"><span class="who">{name}</span><p>{esc(l["t"])}</p></li>'
 
+def shot_html(c, i):
+    """The photo that comes up on this line, shown as a small frame in the script."""
+    at = c.get('imageAt') or []
+    if i not in at:
+        return ''
+    name = c['images'][at.index(i)]
+    ph = T['photos'].get(name) or {}
+    return f'<li class="shot"><img loading="lazy" src="media/photos/{name}.jpg" alt=""><span>{esc(ph.get("title") or name)}</span></li>'
+
 def clip_html(cid, where=None):
     c = C[cid]
     dur = c.get('audio', {}).get('dur')
@@ -29,7 +38,7 @@ def clip_html(cid, where=None):
     q = f'<span class="tag">{quotes} TR quote{"s" if quotes > 1 else ""} for Joe</span>' if quotes else ''
     return f'''<article class="clip" id="{cid}">
   <header><div>{meta}<h3>{esc(c["title"])}</h3></div>{play}</header>
-  <ol class="lines">{"".join(fmt_line(l) for l in c["lines"])}</ol>
+  <ol class="lines">{"".join(shot_html(c, i) + fmt_line(l) for i, l in enumerate(c["lines"]))}</ol>
   <details><summary>Sources {q}</summary><p>{esc(c.get("src", ""))}</p><p class="cid">Clip id: {cid}</p></details>
 </article>'''
 
@@ -154,6 +163,9 @@ h3{font-size:1.35rem;margin:0}
 .lines{list-style:none;padding:0;margin:12px 0 6px;display:grid;gap:8px}
 .ln{display:grid;grid-template-columns:4.6rem minmax(0,1fr);gap:10px;align-items:baseline}
 .ln p{margin:0}
+.shot{display:flex;gap:10px;align-items:center;margin:6px 0 0 4.6rem;font-size:.82rem;color:var(--muted)}
+.shot img{width:96px;height:64px;object-fit:cover;border-radius:4px;flex:none;background:#0002}
+@media (max-width:520px){.shot{margin-left:0}}
 .who{font-family:var(--display);font-size:.9rem;color:var(--muted)}
 .ln.N .who{color:var(--clinker)} .ln.W .who{color:var(--butte)}
 .ln.q p{font-style:italic} .ln.q q{quotes:"“" "”"}

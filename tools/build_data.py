@@ -145,7 +145,7 @@ def align_images(clips, photos):
         imgs = c.get('images') or []
         lines = [((l.get('t') or '') + ' ').lower() for l in c['lines']]
         n = len(lines)
-        if len(imgs) < 2 or n < 2:
+        if len(imgs) < 2 or n < 2 or c.get('imageAt'):
             continue
         at = [None] * len(imgs); at[0] = 0; lo = 0
         for k in range(1, len(imgs)):
@@ -198,8 +198,8 @@ def main(RESEARCH, MEDIA):
     # ---------------------------------------------------------------- stops
     STOPS = [
         # id, kind, approach clip, parked clip, photos, extra
-        ('visitor-center', 'start', None, 'vc-cabin', ['visitor-center', 'maltese-cross-cabin-summer', 'dam-maltese-cross-ranch-1884', 'dam-maltese-cross-cabin-kitchin', 'maltese-cross-cabin-winter', 'tr-1885-buckskin-portrait'], {'visual': 'timeline'}),
-        ('medora-overlook', 'driveby', 'medora-overlook', None, ['medora-from-park', 'dam-medora-from-butte-1900', 'marquis-de-mores-portrait', 'medora-von-hoffman-marquise-portrait', 'de-mores-packing-plant-smokestack'], {}),
+        ('visitor-center', 'start', None, 'vc-cabin', ['visitor-center', 'maltese-cross-cabin-summer', 'nps-cabin-bedroom', 'nps-cabin-living', 'dam-maltese-cross-ranch-1884', 'dam-cabin-worlds-fair-1904', 'maltese-cross-cabin-winter'], {'visual': 'timeline'}),
+        ('medora-overlook', 'driveby', 'medora-overlook', None, ['medora-from-park', 'dam-medora-1885', 'dam-medora-1883-marquis-store', 'de-mores-packing-plant-smokestack', 'dam-abattoir-ruins'], {}),
         ('johnsons-plateau', 'driveby', 'johnsons-plateau', None, ['prairie-dog-black-tailed', 'prairie-dog-town-roadside'], {}),
         ('skyline-vista', 'pulloff', 'skyline-vista', 'skyline-parked', ['little-missouri-river-1', 'trpl-green-roof-aerial', 'trpl-building-front', 'tr-1885-buckskin-full-length'], {}),
         ('river-overlook-cottonwood', 'driveby', 'river-cottonwoods', None, ['cottonwood-campground-river-view', 'dam-plains-river-tr', 'little-missouri-river-2', 'porcupine'], {'name': 'Little Missouri River'}),
@@ -340,6 +340,78 @@ def main(RESEARCH, MEDIA):
         clips[cid]['images'] = [photo(p) for p in imgs]
         for p in imgs:
             photos[p] = None
+
+    # ---------------------------------------------------------------- shot list
+    # Which photo is on screen for each line of narration: (line number, photo). The photo stays up until
+    # the next one in the list. Written by hand, line by line, so the picture matches what is being said.
+    SHOTS = {
+        'welcome': [(0, 'visitor-center'), (2, 'badlands-overlook-buttes'), (3, 'dam-tr-ranch-costume-horse'), (5, 'scenic-loop-drive-scenery'), (7, 'nps-bull-bison-road'), (8, 'scenic-loop-drive-bull-bison'), (9, 'bison-prairie-stroll')],
+        'vc-cabin': [(0, 'maltese-cross-cabin-summer'), (2, 'nps-cabin-historic'), (3, 'dam-maltese-cross-ranch-1884'), (5, 'dam-cabin-worlds-fair-1904'), (6, 'nps-moving-cabin'), (7, 'nps-cabin-bedroom'), (8, 'nps-cabin-living')],
+        'medora-overlook': [(0, 'medora-from-park'), (1, 'dam-medora-1885'), (2, 'dam-medora-1883-marquis-store'), (3, 'dam-marquis-medora-horseback'), (4, 'tr-1885-buckskin-portrait'), (6, 'de-mores-packing-plant-smokestack'), (7, 'dam-abattoir-ruins')],
+        'johnsons-plateau': [(0, 'prairie-dog-town-roadside'), (1, 'nps-prairie-dog-yard'), (2, 'prairie-dog-black-tailed'), (4, 'prairie-dog-alert'), (5, 'nps-pd-kiss')],
+        'skyline-vista': [(0, 'little-missouri-river-1'), (2, 'tr-1885-buckskin-full-length'), (3, 'dam-medora-1885'), (6, 'dam-plains-river-tr')],
+        'skyline-parked': [(0, 'little-missouri-river-1'), (3, 'trpl-green-roof-aerial'), (5, 'trpl-building-front'), (6, 'trpl-roof-walk'), (7, 'trpl-rammed-earth'), (8, 'trpl-boardwalk'), (9, 'trpl-porch')],
+        'river-cottonwoods': [(0, 'cottonwood-campground-river-view'), (1, 'little-missouri-river-2'), (2, 'nps-winter'), (3, 'dam-plains-river-tr'), (4, 'porcupine')],
+        'loop-junction': [(0, 'scenic-loop-drive-scenery')],
+        'pd-junction': [(0, 'prairie-dog-town-roadside'), (1, 'prairie-dog-alert'), (2, 'wm-pd-jump-yip'), (6, 'prairie-dog-black-tailed'), (8, 'nps-prairie-dog-yard'), (9, 'nps-pd-kiss')],
+        'pd-junction-parked': [(0, 'prairie-dog-town-roadside'), (1, 'nps-bison-wallow'), (2, 'nps-coyote-pd-town')],
+        'peaceful-valley': [(0, 'peaceful-valley-ranch-house'), (2, 'peaceful-valley-ranch-complex'), (3, 'peaceful-valley-ranch-1928-camp-wagon'), (6, 'nps-ccc-workers'), (7, 'horses-near-medora-highsmith')],
+        'beef-corral': [(0, 'prairie-dog-black-tailed'), (2, 'pronghorn-1'), (4, 'nps-pronghorn'), (6, 'pronghorn-2')],
+        'wind-canyon': [(0, 'wind-canyon-1'), (1, 'little-missouri-from-wind-canyon'), (2, 'nps-wind-canyon'), (3, 'nps-owlets'), (5, 'nps-wind-canyon-overlook'), (6, 'elk-bull')],
+        'wind-canyon-parked': [(0, 'nps-wind-canyon'), (1, 'little-missouri-from-wind-canyon')],
+        'north-junction': [(0, 'scenic-loop-drive-scenery')],
+        'jones-creek-ccc': [(0, 'nps-jones-creek-ccc'), (2, 'nps-ccc-camp'), (3, 'nps-ccc-workers'), (4, 'nps-ccc-road'), (6, 'nps-ccc-culvert'), (7, 'nps-east-entrance-construction')],
+        'boicourt': [(0, 'boicourt-overlook-winter'), (3, 'nps-boicourt-winter'), (4, 'wild-horses-south-unit')],
+        'boicourt-parked': [(0, 'boicourt-overlook-winter'), (1, 'wind-canyon-sunset')],
+        'buck-hill-invite': [(0, 'buck-hill-view'), (2, 'nps-buck-hill'), (3, 'wild-horses-greys')],
+        'buck-hill-top': [(0, 'buck-hill-view'), (2, 'nps-buck-hill'), (4, 'badlands-overlook-buttes'), (5, 'nps-wind-canyon-night')],
+        'coal-vein-invite': [(0, 'coal-vein-subsidence'), (1, 'wm-lignite-coal-horizon'), (3, 'nps-red-rock'), (5, 'wm-coal-vein-subsidence')],
+        'coal-vein-trail': [(0, 'coal-vein-subsidence'), (1, 'wm-coal-vein-subsidence'), (3, 'scoria-porcelanite'), (4, 'nps-bentonite'), (5, 'wm-slump-blocks'), (6, 'maltese-cross-cabin-winter')],
+        'old-east-entrance': [(0, 'old-east-entrance-station-front'), (1, 'nps-east-entrance-today'), (2, 'nps-east-entrance-construction'), (3, 'old-east-entrance-station-historic'), (5, 'nps-badger'), (6, 'nps-coyote-pd-town')],
+        'badlands-overlook': [(0, 'badlands-overlook-buttes'), (4, 'nps-lignite'), (6, 'little-missouri-from-wind-canyon')],
+        'ridgeline': [(0, 'ridgeline-trail-elk'), (1, 'nps-junipers-north')],
+        'rebuilt-road': [(0, 'scenic-loop-drive-scenery'), (1, 'wm-slump-blocks'), (3, 'nps-bentonite'), (5, 'nps-boicourt-winter')],
+        'scoria-point': [(0, 'scoria-red-rock'), (1, 'clinker-buttes'), (3, 'nps-red-rock'), (6, 'scenic-loop-drive-bull-bison')],
+        'closing': [(0, 'medora-from-park'), (2, 'maltese-cross-cabin-winter'), (3, 'nps-boicourt-winter'), (4, 'dam-ranch-roundup-1885'), (5, 'dam-tr-ranch-costume-horse'), (6, 'tr-1885-buckskin-portrait'), (7, 'bison-prairie-stroll'), (8, 'trpl-green-roof-aerial'), (10, 'wind-canyon-sunset'), (11, 'dam-roundup-outfit')],
+        'story-bison-hunt': [(0, 'tr-1885-buckskin-portrait'), (1, 'bison-prairie-stroll'), (2, 'dam-medora-1885'), (4, 'tr-1885-buckskin-full-length'), (6, 'nps-bull-bison-road'), (8, 'dam-maltese-cross-ranch-1884')],
+        'story-feb-1884': [(0, 'tr-1885-buckskin-portrait'), (2, 'dam-alice-lee'), (4, 'wm-martha-bulloch'), (6, 'wm-tr-diary-1884'), (8, 'badlands-overlook-buttes')],
+        'story-elkhorn': [(0, 'dam-elkhorn-from-river'), (1, 'dam-sewall-dow-tr-maine-1879'), (2, 'dam-dow-tr-sewall-1886'), (3, 'dam-elkhorn-ranch-1886'), (5, 'dam-ranch-wives-manitou'), (6, 'elkhorn-ranch-grand-view')],
+        'story-boat-thieves': [(0, 'little-missouri-river-2'), (1, 'dam-elkhorn-from-river'), (3, 'dam-sewall-dow-boat-staged'), (4, 'elkhorn-ranch-winter-buttes'), (5, 'dam-boat-thieves-staged'), (8, 'dam-dickinson-1883')],
+        'story-horses': [(0, 'wild-horses-south-unit'), (2, 'horses-near-medora-highsmith'), (4, 'nps-horses-young'), (6, 'wild-horses-greys')],
+        'story-bison-comeback': [(0, 'bison-prairie-stroll'), (2, 'wm-bison-skull-pile'), (4, 'bison-crossing-river'), (5, 'nps-bison-chute'), (8, 'scenic-loop-drive-bull-bison')],
+        'story-park-founding': [(0, 'scenic-loop-drive-scenery'), (2, 'badlands-overlook-buttes'), (4, 'wm-truman'), (5, 'visitor-center'), (6, 'nps-wind-canyon-overlook')],
+        'story-elk': [(0, 'dam-landing-cow-elk-1885'), (1, 'nps-elk-ridgeline'), (3, 'elk-fall-harem'), (5, 'elk-bull')],
+        'story-meadowlark': [(0, 'western-meadowlark')],
+        'story-lonely-plains': [(0, 'badlands-overlook-buttes'), (2, 'dam-plains-river-tr'), (4, 'dam-tr-ranch-costume-horse')],
+        'story-stockman': [(0, 'dam-tr-roundup-1885'), (1, 'dam-roundup-outfit'), (2, 'dam-ferris-roundup-1883'), (3, 'dam-ranch-roundup-1885'), (4, 'tr-1885-buckskin-full-length')],
+        'story-his-voice': [(0, 'tr-1885-buckskin-portrait'), (2, 'wm-tr-stump-1912')],
+        'story-night-sky': [(0, 'wind-canyon-sunset'), (1, 'nps-wind-canyon-night'), (3, 'nps-aurora')],
+        'wild-bison': [(0, 'bison-prairie-stroll'), (1, 'scenic-loop-drive-bull-bison'), (2, 'nps-bull-bison-road')],
+        'wild-horses': [(0, 'wild-horses-greys'), (1, 'nps-horses-young'), (2, 'wild-horses-south-unit')],
+        'wild-prairie-dogs': [(0, 'prairie-dog-alert'), (1, 'prairie-dog-black-tailed')],
+        'wild-elk': [(0, 'elk-bull'), (1, 'elk-fall-harem')],
+        'wild-pronghorn': [(0, 'pronghorn-1'), (1, 'nps-pronghorn')],
+        'wild-deer': [(0, 'mule-deer'), (1, 'mule-deer-buck-velvet'), (3, 'white-tailed-deer-buck-ice')],
+        'wild-coyote': [(0, 'coyote-calling'), (1, 'nps-coyote-pd-town')],
+        'wild-birds': [(0, 'golden-eagle-nest'), (1, 'nps-golden-eagle'), (3, 'wild-turkey')],
+        'wild-snake': [(0, 'nps-bullsnake'), (1, 'prairie-rattlesnake-coiled')],
+        'wild-porcupine': [(0, 'porcupine')],
+        'wild-badger': [(0, 'american-badger'), (2, 'nps-badger')],
+        'wild-traffic': [(0, 'scenic-loop-drive-bull-bison')],
+    }
+    for cid, shots in SHOTS.items():
+        if cid not in clips:
+            raise SystemExit('SHOTS refers to unknown clip ' + cid)
+        n = len(clips[cid]['lines'])
+        last = -1
+        for ln, ph in shots:
+            if not (0 <= ln < n) or ln <= last:
+                raise SystemExit(f'SHOTS {cid}: bad line {ln}')
+            last = ln
+        clips[cid]['images'] = [photo(ph) for _, ph in shots]
+        clips[cid]['imageAt'] = [ln for ln, _ in shots]
+        for _, ph in shots:
+            photos[ph] = None
     for cid, v in VISUAL_STORY.items():
         if v:
             clips[cid]['visual'] = v
@@ -359,6 +431,10 @@ def main(RESEARCH, MEDIA):
         'dam-tr-roundup-1885': {'fit': 'contain'}, 'dam-roundup-outfit': {'fit': 'contain'}, 'dam-ferris-roundup-1883': {'fit': 'contain'},
         'dam-landing-cow-elk-1885': {'fit': 'contain'}, 'dam-ranch-wives-manitou': {'fit': 'contain'}, 'dam-maltese-cross-ranch-1884': {'focus': '45% 55%'},
         'trpl-building-front': {'focus': '50% 60%'}, 'trpl-green-roof-aerial': {'focus': '40% 60%'},
+        'dam-alice-lee': {'fit': 'contain'}, 'wm-martha-bulloch': {'fit': 'contain'}, 'wm-truman': {'fit': 'contain'}, 'wm-tr-stump-1912': {'fit': 'contain'},
+        'dam-sewall-dow-tr-maine-1879': {'fit': 'contain'}, 'dam-tr-ranch-costume-horse': {'fit': 'contain'}, 'nps-ccc-camp': {'fit': 'contain'}, 'wm-tr-diary-1884': {'fit': 'contain'},
+        'dam-marquis-medora-horseback': {'fit': 'contain'}, 'nps-ferris-lebo-cabin': {'fit': 'contain'}, 'wm-pd-jump-yip': {'fit': 'contain'}, 'nps-owlets': {'focus': '40% 45%'},
+        'nps-bison-wallow': {'focus': '60% 55%'}, 'nps-coyote-pd-town': {'focus': '40% 45%'}, 'nps-badger': {'focus': '45% 50%'}, 'nps-pd-kiss': {'focus': '40% 60%'},
         'elk-bull': {'focus': '50% 35%'}, 'mule-deer-buck-velvet': {'focus': '50% 35%'}, 'mule-deer': {'focus': '45% 40%'},
         'pronghorn-2': {'focus': '50% 30%'}, 'pronghorn-1': {'focus': '50% 45%'}, 'western-meadowlark': {'focus': '45% 30%'},
         'sharp-tailed-grouse': {'focus': '60% 45%'}, 'wild-turkey': {'focus': '55% 45%'}, 'bison-prairie-stroll': {'focus': '30% 50%'},
