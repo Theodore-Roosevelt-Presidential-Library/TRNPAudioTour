@@ -84,9 +84,17 @@ N: [laughs] And yet he kept coming back for years.
 title: On foot at Skyline Vista
 kind: stop-parked
 stop: skyline-vista
-src: NPS Skyline Vista; NPS cell coverage
+src: NPS Skyline Vista; NPS cell coverage; TRPL Press Backgrounder §6.2 (Snøhetta, sited into the butte, 140,000 native plants on the roof, rammed earth from local soil, walkable roof with views of the park); TRPL board deck (ridge visible from the park → height limits); TRPL Story Guide (exhibits, Boardwalk)
 W: Nice, you stopped. The trail's flat and paved — just a few minutes out and back.
 N: That's the river valley he first rode into. And if you need a signal for anything, this is one of the few spots out here that usually has one.
+W: Oh, and one more thing to find from out there. Look south, back toward Medora, and then a little to the right of town, up on the butte.
+N: See the long, low building with grass growing on the roof? That's the Theodore Roosevelt Presidential Library.
+W: It's easy to miss. And that's on purpose.
+N: That ridge can be seen from inside the park, so everything up there was kept low. The architects — Snøhetta, the Norwegian firm behind the opera house in Oslo — tucked the building into the butte instead of setting it on top.
+W: And the roof is real prairie. About a hundred and forty thousand native plants. You can walk right up onto it.
+N: The walls by the front door are rammed earth. Local soil, packed down in layers, so they're striped just like these buttes.
+W: Inside, it's his whole life — the kid from New York, the rancher out here, the president, the conservationist. Outside, the Boardwalk loops out across restored prairie.
+N: And from up on that roof, you can look right back across the valley to where you're standing now.
 
 # CLIP river-cottonwoods
 title: The Little Missouri

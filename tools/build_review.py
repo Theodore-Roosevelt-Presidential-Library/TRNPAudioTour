@@ -81,6 +81,8 @@ CHECKS = [
     ('The 1884 diary on display', 'The Feb. 14, 1884 story and the closing both say the diary is on display at the Library. Confirm the loan is current.'),
     ('Pronunciations', 'Listen to “de Morès” (Medora Overlook), “coteries” (Johnson’s Plateau) and “porcupette” (Little Missouri). Any line can be re-voiced alone.'),
     ('Joe Wiegand quote session', f'{nq} Roosevelt quotations are read by Nora for now. Each one is tagged below; Joe’s recordings drop in without touching the rest.'),
+    ('Library sightline at Skyline Vista', 'The on-foot clip tells people to look south toward Medora, then a little right of town, to find the Library on its butte. Confirm that direction standing at the overlook.'),
+    ('Historical photos', 'Seventeen Houghton Library (Harvard) photos came from the DAM. Two are staged 1886 re-creations of the boat-thief capture and are captioned that way. Confirm the Harvard terms cover a free public web app.'),
     ('Artlist license', 'Confirm the plan covers AI voice-overs in a free public web app.'),
     ('Animal sounds', 'Bison, elk, coyote and prairie dog recordings are public-domain NPS recordings from other parks (Yellowstone, Wind Cave and others). The horse sounds are domestic horses. No free pronghorn recording exists. Artlist’s Yellowstone Sound Library has better bison takes if you want to swap them in.'),
     ('NPS’s own audio tour', 'NPS has an 11-stop Scenic Loop tour in the NPS App. This one is longer and story-driven; a heads-up to the park before launch is a good idea.'),

@@ -21,7 +21,8 @@ with sync_playwright() as p:
             pass
         last = len(log)
         if pg.is_visible('#picker') and not getattr(pg, '_picked', 0):
-            pg.click('#picker-grid button[data-w="bison"]'); pg._picked = 1
+            try: pg.click('#picker-grid button[data-w="bison"]', timeout=3000); pg._picked = 1
+            except Exception: pass
     # auto-pick an animal when the picker shows, once, to exercise interrupt
     log = pg.evaluate('window.__tourLog')
     pg.screenshot(path=f'/tmp/sim_{d}.png')

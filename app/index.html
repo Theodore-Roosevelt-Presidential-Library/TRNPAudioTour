@@ -64,7 +64,7 @@
 <!-- ============ DASHBOARD ============ -->
 <main id="dash" class="screen dash" hidden>
   <div class="stage" id="stage">
-    <div class="photo" id="photo"><img id="photo-a" alt=""><img id="photo-b" alt=""></div>
+    <div class="photo" id="photo"><div class="photo-fill" id="photo-fill"></div><img id="photo-a" alt=""><img id="photo-b" alt=""></div>
     <div class="stage-shade"></div>
     <div class="stage-text">
       <p class="place-meta" id="place-meta"></p>
@@ -74,7 +74,7 @@
         <p id="cap-text"></p>
       </div>
     </div>
-    <button class="credit-btn" id="photo-credit" aria-label="Photo credit"></button>
+    <button class="credit-btn" id="photo-credit" aria-label="About this photo">i</button>
   </div>
 
   <aside class="side" id="side">
@@ -97,6 +97,7 @@
   <section class="parked" id="parked" hidden aria-label="You are parked">
     <header>
       <h3 id="parked-title">You're parked</h3>
+      <p class="parked-walk" id="parked-walk" hidden>On foot. Take your time — the tour picks right back up when you drive off.</p>
       <button class="x" id="parked-close" aria-label="Close">×</button>
     </header>
     <nav class="tabs" id="tabs" role="tablist"></nav>

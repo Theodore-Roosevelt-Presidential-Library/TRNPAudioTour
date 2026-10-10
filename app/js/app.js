@@ -321,13 +321,24 @@ function tick() {
   if (spd <= CFG.parkSpeed) { if (!S.stillSince) S.stillSince = t; } else { S.stillSince = 0; }
   const parked = S.stillSince && t - S.stillSince >= CFG.parkHoldS;
   const here = nearestStop();
-  if (parked && !S.parkedAt) onParked(here);
-  if (!parked && S.parkedAt && spd > 6) onUnparked();
+  // walked off with the phone before the 10-second hold? slow and right at a pull-off counts as parked too
+  const atPull = here && here.dist < CFG.stopRadiusM && here.st.kind !== 'nav' && here.st.kind !== 'driveby';
+  if (spd < 6 && atPull) { if (!S.slowAtPull) S.slowAtPull = t; } else S.slowAtPull = 0;
+  if ((parked || (S.slowAtPull && t - S.slowAtPull > 15)) && !S.parkedAt) onParked(here);
+  // on foot: parked, then the phone moves away from where the car stopped
+  if (S.parkedAt && S.parkSpot && S.pos) {
+    const away = distM(S.parkSpot, S.pos);
+    if (!S.walking && away > 35 && spd < 7) { S.walking = true; log('walking', { at: S.parkedAt.id }); render.walking(true); }
+    if (S.walking && away < 20 && spd <= CFG.parkSpeed) { S.walking = false; render.walking(false); }
+  }
+  // back in the car: driving speed held for a few seconds (GPS jumps while walking don't count)
+  if (S.parkedAt && spd > 9) { if (!S.driveSince) S.driveSince = t; } else S.driveSince = 0;
+  if (S.parkedAt && S.driveSince && t - S.driveSince > 4) onUnparked(t);
 
   // ---- slowdown → wildlife picker
   if (spd > CFG.slowFrom) S.slowArmed = true;
   const nearPull = here && here.dist < CFG.stopRadiusM;
-  if (S.slowArmed && spd < CFG.slowTo && !nearPull && !S.onSpur) {
+  if (S.slowArmed && spd < CFG.slowTo && !nearPull && !S.onSpur && !S.parkedAt) {
     if (!S.slowSince) S.slowSince = t;
     if (t - S.slowSince > CFG.slowHoldS && !S.pickerOpen && t - S.pickerDismissedAt > 45) { openPicker(); S.slowArmed = false; }
   } else S.slowSince = 0;
@@ -341,11 +352,11 @@ function tick() {
     }
   } else S.overSince = 0;
   // crawling with traffic behind (a guess): well under the limit for 2.5 minutes, not near a stop
-  if (spd > 5 && spd < lim * 0.5 && !nearPull) { if (!S.crawlSince) S.crawlSince = t; if (t - S.crawlSince > 150) enqueue('sys-line-behind', 2); }
+  if (spd > 5 && spd < lim * 0.5 && !nearPull && !S.parkedAt) { if (!S.crawlSince) S.crawlSince = t; if (t - S.crawlSince > 150) enqueue('sys-line-behind', 2); }
   else S.crawlSince = 0;
 
   // ---- off route
-  if (S.routeDist > CFG.offRouteM && !(here && here.dist < 450)) {
+  if (S.routeDist > CFG.offRouteM && !(here && here.dist < 450) && !S.parkedAt) {
     if (!S.offSince) S.offSince = t;
     if (t - S.offSince > 30 && !S.offWarned) { S.offWarned = true; S.played.delete('sys-off-route'); enqueue('sys-off-route', 6); }
   } else { S.offSince = 0; S.offWarned = false; }
@@ -397,16 +408,21 @@ function onParked(here) {
   log('parked', { at: here && here.dist < CFG.stopRadiusM + 150 ? here.st.id : null });
   S.parkedAt = here && here.dist < CFG.stopRadiusM + 150 ? here.st : { id: 'generic', name: 'Parked', photos: S.photos.slice(0, 4), quiz: [] };
   const st = S.parkedAt;
+  S.parkSpot = S.pos ? S.pos.slice() : null; S.parkedT = now(); S.walking = false;
   if (st.id === 'visitor-center' && !S.played.has('welcome')) return; // welcome handles itself
   if (st.approach && !S.played.has(st.approach)) { S.skipped.delete(st.approach); enqueue(st.approach, 6); }
   if (st.parked && !S.played.has(st.parked)) enqueue(st.parked, 6);
   render.parked(st);
 }
-function onUnparked() {
-  const st = S.parkedAt;
+function onUnparked(t) {
+  const st = S.parkedAt, long = S.parkedT && (t || now()) - S.parkedT > 120;
   // you drove off before the "on foot" clip got its turn: drop it, it can play if you come back
   if (st && st.parked) S.queue = S.queue.filter(q => q.id !== st.parked);
-  S.parkedAt = null; render.unparked();
+  S.parkedAt = null; S.parkSpot = null; S.driveSince = 0; S.slowAtPull = 0;
+  if (S.walking) { S.walking = false; render.walking(false); }
+  render.unparked();
+  // a quick "here we go" after a real stop, so you know the tour picked back up
+  if (long && st && st.id !== 'visitor-center') { S.played.delete('sys-resume'); enqueue('sys-resume', 4); }
 }
 
 // ------------------------------------------------------------------ wildlife picker
@@ -473,7 +489,11 @@ function buildSimPath(dir, withSpurs) {
     pts.push({ ...pts[pts.length - 1], hold: 90, stop: T.spurs[key].end });
     for (let m = len; m > 0; m -= 0.016) { const [lon, lat] = pointAt(sp, m); push(lon, lat, T.spurs[key].mph); }
   };
-  walk(0, R.junctionOut);
+  { let m0 = 0; // outbound stem, pausing at its pull-offs
+    for (const st of T.stops.filter(s => s.on === 'stem' && s.kind === 'pulloff' && s.mi > 0).sort((a, b) => a.mi - b.mi)) {
+      walk(m0, st.mi); m0 = st.mi; pts.push({ ...pts[pts.length - 1], mark: st.id });
+    }
+    walk(m0, R.junctionOut); }
   const loopStops = T.stops.filter(s => s.on === 'loop' && s.mi != null);
   if (dir === 'cw') {
     let m = R.junctionOut;
@@ -545,10 +565,20 @@ const render = {
     const name = S.photos[S.photoIdx]; if (!name) return;
     const a = $('photo-a'), b = $('photo-b');
     const [cur, nxt] = a.classList.contains('on') ? [a, b] : [b, a];
-    nxt.onload = () => { nxt.classList.add('on'); cur.classList.remove('on'); };
+    const fr = S.tour.photos[name] || {};
+    nxt.onload = () => {
+      // a wide shot on a tall screen (or the reverse) would lose its subject to the crop: show it whole instead
+      const st = $('photo-fill').parentElement, sa = st.clientWidth / Math.max(1, st.clientHeight), pa = nxt.naturalWidth / Math.max(1, nxt.naturalHeight);
+      const fit = fr.fit === 'contain' || Math.max(sa / pa, pa / sa) > 1.45 ? 'contain' : 'cover';
+      nxt.classList.toggle('contain', fit === 'contain');
+      nxt.style.objectPosition = fit === 'contain' ? '50% 30%' : (fr.focus || '50% 50%'); // contained: sit above the captions
+      nxt.style.transformOrigin = fr.focus || '50% 50%';
+      $('photo-fill').style.backgroundImage = fit === 'contain' ? `url(media/photos/${name}.jpg)` : 'none';
+      nxt.classList.add('on'); cur.classList.remove('on');
+    };
     nxt.src = 'media/photos/' + name + '.jpg';
     nxt.alt = (S.tour.photos[name] || {}).title || '';
-    const c = S.tour.photos[name] || {}; $('photo-credit').textContent = c.credit || '';
+    const c = S.tour.photos[name] || {}; const cb = $('photo-credit'); cb.hidden = !c.credit; cb.title = c.credit || ''; cb.setAttribute('aria-label', 'About this photo' + (c.credit ? ': ' + c.credit : ''));
   },
   clipStarted(job) {
     const c = job.clip;
@@ -578,7 +608,8 @@ const render = {
     $('spd').textContent = spd;
     $('limit').querySelector('b').textContent = lim;
     let pace = 'ok', msg = 'Right on pace';
-    if (S.speed <= CFG.parkSpeed) { pace = 'still'; msg = S.parkedAt ? 'Parked' : 'Stopped'; }
+    if (S.walking) { pace = 'still'; msg = 'On foot — the tour waits for you'; }
+    else if (S.speed <= CFG.parkSpeed) { pace = 'still'; msg = S.parkedAt ? 'Parked' : 'Stopped'; }
     else if (S.speed > lim + CFG.overBy) { pace = 'hot'; msg = 'Ease off — you’ll miss the stories'; }
     else if (S.speed > lim + 1) { pace = 'warm'; msg = 'A little quick'; }
     else if (S.speed < lim * 0.5) { msg = 'Taking it slow'; }
@@ -665,6 +696,7 @@ const render = {
     });
   },
   unparked() { $('parked').hidden = true; },
+  walking(on) { document.body.classList.toggle('walking', on); const n = $('parked-walk'); if (n) n.hidden = !on; },
 };
 function fmtMi(d) { return d < 0.1 ? 'here' : d < 10 ? d.toFixed(1) + ' mi' : Math.round(d) + ' mi'; }
 
@@ -673,7 +705,7 @@ function quizHtml(qs) {
   return qs.map((q, qi) => `<div class="quiz" data-q="${qi}"><p>${q.q}</p>${q.a.map((a, ai) => `<button data-a="${ai}" data-c="${q.c}">${a}</button>`).join('')}<div class="why" hidden>${q.why}</div></div>`).join('');
 }
 function photosHtml(list) {
-  return `<div class="thumbs">${list.map(n => { const c = S.tour.photos[n] || {}; return `<button data-photo="${n}"><img loading="lazy" src="media/photos/${n}.jpg" alt="${c.title || ''}"><small>${c.credit || ''}</small></button>`; }).join('')}</div>`;
+  return `<div class="thumbs">${list.map(n => { const c = S.tour.photos[n] || {}; return `<button data-photo="${n}"><img loading="lazy" src="media/photos/${n}.jpg" alt="${c.title || ''}" style="object-fit:${c.fit === 'contain' ? 'contain' : 'cover'};object-position:${c.focus || '50% 50%'}"></button>`; }).join('')}</div>`;
 }
 function soundsHtml() {
   return `<p>Real recordings. Turn it up.</p><div class="sounds">${S.tour.soundboard.map(s => `<button data-sound="${s.sound}">${s.label}</button>`).join('')}</div>`;
@@ -779,7 +811,7 @@ async function boot() {
   // picker buttons
   $('picker-grid').innerHTML = S.tour.wildlife.map(w => {
     const img = (S.tour.clips[w.clip].images || [])[0];
-    return `<button data-w="${w.id}" style="${img ? `background-image:url(media/photos/${img}.jpg)` : ''}"><span>${w.label}</span></button>`;
+    return `<button data-w="${w.id}" style="${img ? `background-image:url(media/photos/${img}.jpg);background-position:${(S.tour.photos[img] || {}).focus || '50% 50%'}` : ''}"><span>${w.label}</span></button>`;
   }).join('');
   $('picker-grid').onclick = (e) => { const b = e.target.closest('[data-w]'); if (b) pickAnimal(S.tour.wildlife.find(w => w.id === b.dataset.w)); };
   $('picker-close').onclick = closePicker;
@@ -788,7 +820,7 @@ async function boot() {
   $('btn-preview').onclick = () => begin('sim');
   $('link-credits').onclick = (e) => { e.preventDefault(); showDialog(creditsHtml()); };
   $('parked-close').onclick = () => { $('parked').hidden = true; };
-  $('photo-credit').onclick = () => { const n = S.photos[S.photoIdx], c = S.tour.photos[n] || {}; showDialog(`<h3>${c.title || ''}</h3><p>${c.credit || ''}. ${c.license || ''}.</p><p><a href="${c.url}" target="_blank" rel="noopener">Source</a></p>`); };
+  $('photo-credit').onclick = () => { const n = S.photos[S.photoIdx], c = S.tour.photos[n] || {}; showDialog(`<h3>${c.title || ''}</h3>${c.date ? `<p>${c.date}</p>` : ''}<p class="fine">${c.credit || ''}. ${c.license || ''}.</p><p><a href="${c.url}" target="_blank" rel="noopener">Source</a></p>`); };
   $('btn-pause').onclick = () => {
     S.userPaused = !S.userPaused; $('btn-pause').textContent = S.userPaused ? '▶' : '❚❚';
     $('btn-pause').setAttribute('aria-label', S.userPaused ? 'Resume narration' : 'Pause narration');
@@ -839,4 +871,5 @@ function begin(mode) {
 }
 
 boot();
+if (TEST) { window.__render = render; window.__S = S; }
 })();

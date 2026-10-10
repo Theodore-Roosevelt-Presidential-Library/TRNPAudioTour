@@ -396,6 +396,78 @@
   "done": true
  },
  {
+  "clip": "skyline-parked",
+  "i": 2,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Oh, and one more thing to find from out there. Look south, back toward Medora, and then a little to the right of town, up on the butte.",
+  "file": "skyline-parked--02--bb193c5907.mp3",
+  "done": true
+ },
+ {
+  "clip": "skyline-parked",
+  "i": 3,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "See the long, low building with grass growing on the roof? That's the Theodore Roosevelt Presidential Library.",
+  "file": "skyline-parked--03--3ce6fda8b8.mp3",
+  "done": true
+ },
+ {
+  "clip": "skyline-parked",
+  "i": 4,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "It's easy to miss. And that's on purpose.",
+  "file": "skyline-parked--04--f15dd01f92.mp3",
+  "done": true
+ },
+ {
+  "clip": "skyline-parked",
+  "i": 5,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "That ridge can be seen from inside the park, so everything up there was kept low. The architects — SNUH-het-tah, the Norwegian firm behind the opera house in Oslo — tucked the building into the butte instead of setting it on top.",
+  "file": "skyline-parked--05--f90d40ebe2.mp3",
+  "done": true
+ },
+ {
+  "clip": "skyline-parked",
+  "i": 6,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "And the roof is real prairie. About a hundred and forty thousand native plants. You can walk right up onto it.",
+  "file": "skyline-parked--06--760dcd79f5.mp3",
+  "done": true
+ },
+ {
+  "clip": "skyline-parked",
+  "i": 7,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "The walls by the front door are rammed earth. Local soil, packed down in layers, so they're striped just like these buttes.",
+  "file": "skyline-parked--07--5a4b452fa7.mp3",
+  "done": true
+ },
+ {
+  "clip": "skyline-parked",
+  "i": 8,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Inside, it's his whole life — the kid from New York, the rancher out here, the president, the conservationist. Outside, the Boardwalk loops out across restored prairie.",
+  "file": "skyline-parked--08--2dc3b35a43.mp3",
+  "done": true
+ },
+ {
+  "clip": "skyline-parked",
+  "i": 9,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "And from up on that roof, you can look right back across the valley to where you're standing now.",
+  "file": "skyline-parked--09--5bc6ea6148.mp3",
+  "done": true
+ },
+ {
   "clip": "river-cottonwoods",
   "i": 0,
   "speaker": "N",

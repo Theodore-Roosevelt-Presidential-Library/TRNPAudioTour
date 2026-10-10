@@ -139,11 +139,11 @@ def main(RESEARCH, MEDIA):
     # ---------------------------------------------------------------- stops
     STOPS = [
         # id, kind, approach clip, parked clip, photos, extra
-        ('visitor-center', 'start', None, 'vc-cabin', ['visitor-center', 'maltese-cross-cabin-summer', 'maltese-cross-cabin-winter', 'tr-1885-buckskin-portrait'], {'visual': 'timeline'}),
-        ('medora-overlook', 'driveby', 'medora-overlook', None, ['medora-from-park', 'marquis-de-mores-portrait', 'medora-von-hoffman-marquise-portrait', 'de-mores-packing-plant-smokestack'], {}),
+        ('visitor-center', 'start', None, 'vc-cabin', ['visitor-center', 'maltese-cross-cabin-summer', 'dam-maltese-cross-ranch-1884', 'dam-maltese-cross-cabin-kitchin', 'maltese-cross-cabin-winter', 'tr-1885-buckskin-portrait'], {'visual': 'timeline'}),
+        ('medora-overlook', 'driveby', 'medora-overlook', None, ['medora-from-park', 'dam-medora-from-butte-1900', 'marquis-de-mores-portrait', 'medora-von-hoffman-marquise-portrait', 'de-mores-packing-plant-smokestack'], {}),
         ('johnsons-plateau', 'driveby', 'johnsons-plateau', None, ['prairie-dog-black-tailed', 'prairie-dog-town-roadside'], {}),
-        ('skyline-vista', 'pulloff', 'skyline-vista', 'skyline-parked', ['little-missouri-river-1', 'tr-1885-buckskin-full-length'], {}),
-        ('river-overlook-cottonwood', 'driveby', 'river-cottonwoods', None, ['cottonwood-campground-river-view', 'little-missouri-river-2', 'porcupine'], {'name': 'Little Missouri River'}),
+        ('skyline-vista', 'pulloff', 'skyline-vista', 'skyline-parked', ['little-missouri-river-1', 'trpl-green-roof-aerial', 'trpl-building-front', 'tr-1885-buckskin-full-length'], {}),
+        ('river-overlook-cottonwood', 'driveby', 'river-cottonwoods', None, ['cottonwood-campground-river-view', 'dam-plains-river-tr', 'little-missouri-river-2', 'porcupine'], {'name': 'Little Missouri River'}),
         ('loop-junction', 'nav', 'loop-junction', None, ['scenic-loop-drive-scenery'], {'name': 'Loop junction', 'visual': 'choose'}),
         ('prairie-dog-town-junction', 'pulloff', 'pd-junction', 'pd-junction-parked', ['prairie-dog-alert', 'prairie-dog-town-roadside', 'american-badger', 'coyote-calling'], {'name': 'Prairie Dog Town', 'visual': 'soundboard'}),
         ('peaceful-valley-ranch', 'pulloff', 'peaceful-valley', None, ['peaceful-valley-ranch-house', 'peaceful-valley-ranch-1928-camp-wagon', 'peaceful-valley-ranch-complex'], {}),
@@ -246,19 +246,20 @@ def main(RESEARCH, MEDIA):
     IMG_STORY = {
         'story-bison-hunt': ['tr-1885-buckskin-portrait', 'bison-prairie-stroll'],
         'story-feb-1884': ['tr-1885-buckskin-portrait'],
-        'story-elkhorn': ['elkhorn-ranch-grand-view', 'elkhorn-ranch-winter-buttes'],
-        'story-boat-thieves': ['little-missouri-river-2', 'elkhorn-ranch-winter-buttes'],
+        'story-elkhorn': ['dam-elkhorn-from-river', 'dam-elkhorn-ranch-1886', 'dam-dow-tr-sewall-1886', 'dam-ranch-wives-manitou', 'dam-elkhorn-opposite-butte', 'elkhorn-ranch-grand-view'],
+        'story-boat-thieves': ['dam-sewall-dow-boat-staged', 'dam-boat-thieves-staged', 'little-missouri-river-2', 'elkhorn-ranch-winter-buttes'],
         'story-horses': ['wild-horses-greys', 'wild-horses-south-unit', 'horses-near-medora-highsmith'],
         'story-bison-comeback': ['bison-crossing-river', 'bison-prairie-stroll'],
         'story-park-founding': ['scenic-loop-drive-scenery', 'visitor-center'],
-        'story-elk': ['elk-fall-harem', 'elk-bull'],
+        'story-elk': ['elk-fall-harem', 'dam-landing-cow-elk-1885', 'elk-bull'],
         'story-meadowlark': ['western-meadowlark'],
         'story-lonely-plains': ['badlands-overlook-buttes'],
-        'story-stockman': ['tr-1885-buckskin-full-length'],
+        'story-stockman': ['dam-tr-roundup-1885', 'dam-roundup-outfit', 'dam-ferris-roundup-1883', 'dam-ranch-roundup-1885', 'tr-1885-buckskin-full-length'],
         'story-his-voice': ['tr-1885-buckskin-portrait'],
         'story-night-sky': ['wind-canyon-sunset'],
         'rebuilt-road': ['scenic-loop-drive-scenery', 'scenic-loop-drive-bull-bison'],
-        'closing': ['tr-1885-buckskin-portrait', 'chateau-de-mores'],
+        'closing': ['tr-1885-buckskin-portrait', 'dam-dickinson-medora-1900', 'trpl-green-roof-aerial'],
+        'skyline-parked': ['trpl-green-roof-aerial', 'trpl-building-front', 'trpl-roof-walk', 'little-missouri-river-1'],
         'welcome': ['visitor-center', 'scenic-loop-drive-scenery'],
         'wild-bison': ['bison-prairie-stroll', 'scenic-loop-drive-bull-bison'],
         'wild-horses': ['wild-horses-greys', 'wild-horses-south-unit'],
@@ -290,10 +291,29 @@ def main(RESEARCH, MEDIA):
                 if cid not in clips:
                     raise SystemExit(f'stop {st["id"]} refers to unknown clip {cid}')
                 clips[cid].setdefault('images', st['photos'])
+    # framing: 'contain' shows the whole photo (people, tall shots); focus keeps the subject in frame when cropped
+    FRAMING = {
+        'tr-1885-buckskin-portrait': {'fit': 'contain'}, 'tr-1885-buckskin-full-length': {'fit': 'contain'},
+        'marquis-de-mores-portrait': {'fit': 'contain'}, 'medora-von-hoffman-marquise-portrait': {'fit': 'contain'},
+        'peaceful-valley-ranch-1928-camp-wagon': {'fit': 'contain'}, 'prairie-rattlesnake-coiled': {'fit': 'contain'},
+        'dam-dow-tr-sewall-1886': {'fit': 'contain'}, 'dam-boat-thieves-staged': {'fit': 'contain'}, 'dam-sewall-dow-boat-staged': {'fit': 'contain'},
+        'dam-tr-roundup-1885': {'fit': 'contain'}, 'dam-roundup-outfit': {'fit': 'contain'}, 'dam-ferris-roundup-1883': {'fit': 'contain'},
+        'dam-landing-cow-elk-1885': {'fit': 'contain'}, 'dam-ranch-wives-manitou': {'fit': 'contain'}, 'dam-maltese-cross-ranch-1884': {'focus': '45% 55%'},
+        'trpl-building-front': {'focus': '50% 60%'}, 'trpl-green-roof-aerial': {'focus': '40% 60%'},
+        'elk-bull': {'focus': '50% 35%'}, 'mule-deer-buck-velvet': {'focus': '50% 35%'}, 'mule-deer': {'focus': '45% 40%'},
+        'pronghorn-2': {'focus': '50% 30%'}, 'pronghorn-1': {'focus': '50% 45%'}, 'western-meadowlark': {'focus': '45% 30%'},
+        'sharp-tailed-grouse': {'focus': '60% 45%'}, 'wild-turkey': {'focus': '55% 45%'}, 'bison-prairie-stroll': {'focus': '30% 50%'},
+        'scenic-loop-drive-bull-bison': {'focus': '50% 40%'}, 'prairie-dog-alert': {'focus': '45% 35%'},
+        'prairie-dog-black-tailed': {'focus': '40% 45%'}, 'coyote-calling': {'focus': '65% 30%'}, 'wild-horses-greys': {'focus': '45% 40%'},
+        'american-badger': {'focus': '40% 45%'}, 'porcupine': {'focus': '45% 40%'}, 'golden-eagle-nest': {'focus': '45% 45%'},
+        'white-tailed-deer-buck-ice': {'focus': '55% 45%'}, 'de-mores-packing-plant-smokestack': {'focus': '55% 50%'},
+        'maltese-cross-cabin-summer': {'focus': '50% 55%'}, 'maltese-cross-cabin-winter': {'focus': '50% 55%'},
+        'peaceful-valley-ranch-house': {'focus': '35% 55%'}, 'peaceful-valley-ranch-complex': {'focus': '28% 60%'}, 'old-east-entrance-station-front': {'focus': '40% 50%'},
+    }
     for p in list(photos):
         it = manifest[f'photos/{p}.jpg']
         photos[p] = {'title': it.get('title'), 'credit': it.get('attribution') or it.get('author'), 'license': it.get('license'), 'url': it.get('source_url'),
-                     'w': it.get('width'), 'h': it.get('height')}
+                     'w': it.get('width'), 'h': it.get('height'), 'date': it.get('date') if it.get('source') == 'TRPL Acquia DAM' and it.get('subject') == 'Historical photograph' else None, **FRAMING.get(p, {})}
 
     sounds = {}
     for f, it in manifest.items():
