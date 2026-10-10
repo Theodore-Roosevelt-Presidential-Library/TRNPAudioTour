@@ -1,0 +1,999 @@
+{
+  "meta": {
+    "title": "TRNP South Unit Scenic Loop Drive - stops in road order (clockwise from the South Unit Visitor Center)",
+    "compiled": "2026-10-10",
+    "units": "statute miles; WGS84 decimal degrees",
+    "mileage_method": "Road distances computed by routing the full drive on OpenStreetMap data with OSRM (router.project-osrm.org), VC -> Wind Canyon -> Boicourt -> Badlands Spur -> Badlands Overlook -> Scoria Point -> VC, then projecting each stop onto that polyline. Expect +/-0.1-0.2 mi vs. park mile markers. Cross-check: park mile markers 22-28 bound the rebuilt section (computed: Old East Entrance pull-off 22.3, junction 28.5) and NPS put a 2020 culvert failure at MM 12 just beyond Wind Canyon (computed 10.25), so computed clockwise miles track the park's mile-marker direction closely.",
+    "road_layout": {
+      "stem": "Out-and-back stem from the South Unit Visitor Center/entrance in Medora north along East River Road ~6.4 mi to the loop junction near the Peaceful Valley prairie dog town (46.95498,-103.51196). Stem passes Medora Overlook, Johnson's Plateau prairie dog town, Skyline Vista and Cottonwood Campground.",
+      "loop_proper": "~22.1 mi (computed 22.08) from the junction and back. AP (Dec 2025) calls it a '21-mile loop'.",
+      "total_drive": "NPS: 36 miles. Computed VC->full loop->VC on OSM: ~34.9 mi (plus spurs: Buck Hill ~0.8 mi each way, Coal Vein ~0.8 mi each way). Older NPS pages (2021) describe a '24-mile out-and-back' drive - that was the closure-era configuration and is obsolete.",
+      "time": "NPS: 'Plan at least 2 hours' (South Unit page); 'about 90 minutes' travel time (car page, updated Nov 28, 2025).",
+      "two_way": "NPS: 'The two-way paved loop is open to motor vehicles and cyclists.' Can be driven either direction.",
+      "recommended_direction": "No NPS recommendation found. Park mile markers increase clockwise (north branch first, to Wind Canyon). The TRPL project park guide suggests clockwise; that is a TRPL suggestion, not NPS.",
+      "north_junction": "At ~mile 10.6 (46.99321,-103.48747), just past Wind Canyon, gravel East River Road continues north out of the park while the loop turns east.",
+      "spurs": {
+        "buck_hill": "Turn at ~mile 18.2; Buck Hill Road ~0.8 mi one-way (NPS: 'just under a mile'), paved then compacted; OSM maxspeed 15 mph.",
+        "coal_vein": "Turn at ~mile 19.6; Coal Vein Road ~0.82 mi one-way to a turning circle; surface 'compacted' (unpaved) per OSM; OSM maxspeed 25 mph.",
+        "peaceful_valley": "Paved spur ~0.3 mi (0.5 mi from junction) to Peaceful Valley Ranch.",
+        "halliday_well": "Gravel road ~0.44 mi to Halliday Well Trailhead.",
+        "upper_jones_creek": "Very short gravel spur (~0.07 mi) to parking."
+      },
+      "rebuilt_section": "NPS (Nov 25, 2025 release): the ~$51M GAOA project repaired 'the section of the loop from the East River Road intersection to the Old East Entrance Station pull-off' - i.e., the south branch from the loop junction to the Old East Entrance pull-off, park mile markers ~22-28 (InForum). Includes Scoria Point, Ridgeline Nature Trail and Badlands Overlook, all closed 2019-2025. Work also improved parking areas and pullouts (Scoria Point parking widened). Reopened Nov 23-25, 2025 (AP says Nov. 23; NPS ribbon cutting Nov. 25)."
+    },
+    "speed_limits": {
+      "nps_statement": "NPS Cars and Private Vehicles page (updated Nov 28, 2025): 'Unless otherwise posted, the speed limit through the park is 25 mph.' NPS Safety page: 'Speed limits are posted and enforced on park roads.'",
+      "by_segment_osm": [
+        {
+          "segment": "Medora / East River Road stem, VC to loop junction (mi 0-6.4)",
+          "maxspeed": "35 mph",
+          "source": "OSM maxspeed tags on East River Road ways (e.g., 46707784, 9592654)"
+        },
+        {
+          "segment": "North branch, junction -> Peaceful Valley -> Wind Canyon -> north junction (mi 6.4-10.6)",
+          "maxspeed": "35 mph",
+          "source": "OSM Scenic Loop Drive ways 9591054, 60510398, 79292156, 1002074417/8"
+        },
+        {
+          "segment": "East and south sides, north junction -> Boicourt -> Buck Hill -> Old East Entrance -> Badlands Overlook -> Scoria Point (mi 10.6-28.3)",
+          "maxspeed": "25 mph",
+          "source": "OSM Scenic Loop Drive ways 1379009243, 79292149"
+        },
+        {
+          "segment": "Last ~0.2 mi of south branch into the junction (mi 28.3-28.5)",
+          "maxspeed": "35 mph",
+          "source": "OSM way 79292144"
+        },
+        {
+          "segment": "Buck Hill Road spur",
+          "maxspeed": "15 mph",
+          "source": "OSM ways 9588394, 1537807318, 1537807376"
+        },
+        {
+          "segment": "Coal Vein Road spur",
+          "maxspeed": "25 mph",
+          "source": "OSM way 9590938"
+        }
+      ],
+      "confidence": "The 25 mph default is NPS-confirmed. The 35 mph segments come only from OpenStreetMap tags (community-mapped) - consistent with posted 35 on the wider west side but NOT confirmed by an NPS page found. Verify on the ground or with the park before narrating any specific number other than 25."
+    },
+    "closures": {
+      "seasonal": "Open 24 hours, year-round. NPS: 'Portions of the South Unit Scenic Loop Drive and North Unit Scenic Road may be closed in winter due to snow and ice' (Operating Hours page, updated July 1, 2026). No fixed seasonal closure dates published. OSM shows a gate on the south branch at the loop junction (node 12769470916) and on a service road beside it; NPS does not document a gate schedule.",
+      "current_2026": "NPS alerts API (read 2026-10-10) shows 3 alerts, none a road closure: cashless fees from May 1, 2026; mobile-map address '201 East River Road N. Medora, ND 58645'; Petrified Forest trailhead approved route from I-94 Exit 10. FLAG: NPS South Unit page (updated May 17, 2026) and trlibrary.com/visit/national-park say 'Ridgeline Nature Trail (0.6 mile - currently inaccessible due to road collapse)'. No 2026 news release about a new collapse was found, and the full loop is otherwise described as open; this may be leftover closure-era text. Confirm with the park (701-623-4466)."
+    },
+    "safety_and_rules": {
+      "wildlife_distance": "Stay at least 25 yards from all wildlife (NPS Wildlife Viewing page). Park regulations require at least 25 yards ('the length of two full-sized busses') from large animals such as bison, elk, deer, pronghorn and horses (NPS news releases July 2019, July 18, 2023). 'If an animal moves away from you as you approach, you are too close!' Rule of thumb: hold up a thumb; if it covers the animal you are far enough (NPS Safety page audio). Bison bulls can be aggressive in the rut, mid-July through August.",
+      "no_feeding": "Feeding animals of any kind is prohibited (NPS Safety). 'Please do not feed prairie dogs' - human food makes them sick, they can bite, and they may host fleas that transmit bubonic plague (NPS Prairie Dogs page). Rattlesnakes and black widows often live in prairie dog burrows (NPS Safety).",
+      "driving": "Drive slowly; watch for animals crossing; deer, elk, pronghorn and feral horses are seldom alone (NPS Wildlife Viewing). Use extra caution at night (NPS Safety). Bison have right of way (NPS Safety photo caption). Roads are shared with cyclists and pedestrians; parts are narrow with sharp curves/steep grades, originally built by the CCC (NPS Getting Around / RVs pages). Pets stay in the vehicle around wildlife; leashed pets allowed on roads, shoulders, parking areas but not on trails.",
+      "pulling_off": "No explicit NPS 'pull completely off the road' rule was found on THRO pages. NPS does say to use pullouts/overlooks and obey posted signs; recommend scripting 'use the pullouts - don't stop in the travel lane' as general guidance rather than quoting a regulation.",
+      "no_overnight": "No camping or staying overnight along the park road or at visitor centers; use Cottonwood Campground (NPS RVs page).",
+      "entrance_fee": "Required year-round: $30 private vehicle (7 days), $25 motorcycle, $15 per person (foot/bike, 16+), $55 TRNP annual pass; America the Beautiful passes accepted. Collected at the Medora entrance station May-September, at the visitor center otherwise, drop box near the flagpole when closed. Cashless as of May 1, 2026 (cards/digital only). No timed entry.",
+      "cell_coverage": "NPS place records list 'Cellular Signal' at Skyline Vista, Boicourt Overlook, Boicourt Trail and Buck Hill (and the visitor center). Absence of the tag elsewhere does not prove no signal; coverage on the loop is spotty, so the GPS tour should be fully offline-capable.",
+      "services": "No services, restaurants, gas or lodging in the park; Medora has gas and food (NPS South Unit page)."
+    },
+    "nps_existing_audio_tour": "The NPS already publishes a 'South Unit / Scenic Loop Drive Audio Tour' in the NPS App: place records exist for Medora Overlook, Johnson's Plateau Roadside Pulloff, Prairie Dog Colony Pulloff, Beef Corral Bottom, Upper Jones Creek Trailhead, Talkington Trail Roadside Pulloff, Turn to Buck Hill, Coal Vein Trail Turn, Badlands Spur Trail, Prairie Ecosystems, and 'Audio Tour Conclusion'.",
+    "wild_horses_2026": "NPS GPS-collar updates: ~198 horses in the South Unit (Feb-Mar 2026). Frequent locations: Coal Vein Trailhead, park southeast corner, Old East Entrance, north-central boundary, Wind Canyon road junction, Johnson's Plateau, Jones Creek, Cottonwood Campground; also near Buck Hill and loop mile markers 12-13 (summer 2025).",
+    "key_sources": [
+      "https://www.nps.gov/thro/planyourvisit/south-unit.htm (updated May 17, 2026)",
+      "https://www.nps.gov/thro/planyourvisit/car.htm (updated Nov 28, 2025)",
+      "https://www.nps.gov/thro/learn/news/theodore-roosevelt-national-park-celebrates-completion-of-south-unit-scenic-road-repair-project.htm (Nov 25, 2025)",
+      "https://www.nps.gov/thro/planyourvisit/accessibility.htm",
+      "https://www.nps.gov/thro/planyourvisit/hiking-and-trail-information.htm",
+      "https://www.nps.gov/thro/planyourvisit/safety.htm",
+      "https://www.nps.gov/thro/planyourvisit/wildlife-viewing.htm",
+      "https://www.nps.gov/thro/planyourvisit/fees.htm",
+      "https://www.nps.gov/thro/planyourvisit/hours.htm (updated July 1, 2026)",
+      "https://www.nps.gov/thro/planyourvisit/south-unit-print-map.htm (map image SU-Printable-Map.png)",
+      "https://developer.nps.gov/api/v1/places|alerts|visitorcenters?parkCode=thro",
+      "https://www.inforum.com/news/north-dakota/work-on-the-theodore-roosevelt-national-park-loop-has-stopped-for-the-winter-but-the-finish-line-is-in-sight",
+      "https://www.newstribune.com/news/2025/dec/07/reconstructed-road-opens-grand-views-at-theodore/ (AP)",
+      "https://northdakotamonitor.com/2025/11/25/scenic-loop-at-theodore-roosevelt-national-parks-south-unit-reopens-for-visitor-traffic/",
+      "OpenStreetMap data (c) OpenStreetMap contributors, ODbL",
+      "TRPL Project doc theodore_roosevelt_national_park_guide.md"
+    ]
+  },
+  "stops": [
+    {
+      "order": 1,
+      "id": "visitor-center",
+      "name": "South Unit Visitor Center",
+      "type": "visitor_center",
+      "lat": 46.9165,
+      "lon": -103.52621,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10 (visitorcenters endpoint)",
+      "road_segment": "stem",
+      "miles_from_visitor_center_clockwise": 0.0,
+      "miles_from_visitor_center_counterclockwise": 0.0,
+      "nearest_road_point": {
+        "lat": 46.91633,
+        "lon": -103.52587,
+        "distance_from_road_m": 32,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "right",
+      "must_leave_car": "Park and walk in; no hike",
+      "restrooms": true,
+      "facilities": "Flush restrooms, water bottle filling, picnic table, bookstore (TRNHA), museum, theater (park film \"Refuge of the American Spirit\", ~17 min), entrance passes, backcountry permits, cell signal; wheelchair accessible",
+      "description": "Located in Medora at the start of the scenic drive. Rangers help with trip planning and issue backcountry permits; museum with artifacts from TR's presidency and time in the badlands. Hours per NPS API: 8:00 AM-5:00 PM daily (Mountain Time) at time of read. Physical address for mobile maps: 201 East River Road N., Medora, ND 58645.",
+      "source_urls": [
+        "https://www.nps.gov/thro/planyourvisit/visitorcenters.htm",
+        "https://www.nps.gov/thro/planyourvisit/south-unit.htm"
+      ]
+    },
+    {
+      "order": 2,
+      "id": "maltese-cross-cabin",
+      "name": "Maltese Cross Cabin",
+      "type": "historic_site",
+      "lat": 46.9169,
+      "lon": -103.52624,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10",
+      "road_segment": "stem",
+      "miles_from_visitor_center_clockwise": 0.0,
+      "miles_from_visitor_center_counterclockwise": 0.0,
+      "nearest_road_point": {
+        "lat": 46.91636,
+        "lon": -103.52583,
+        "distance_from_road_m": 67,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "right",
+      "must_leave_car": "Short walk behind the visitor center",
+      "restrooms": true,
+      "facilities": "Uses visitor center restrooms; cabin is wheelchair accessible",
+      "description": "Theodore Roosevelt's first home in the Dakota badlands (Chimney Butte / Maltese Cross Ranch, 1883). The cabin traveled to the 1904 St. Louis World's Fair and the 1905 Lewis and Clark Exposition in Portland, sat on the State Capitol grounds in Bismarck, and came to the park in 1959. Open during visitor center hours; self-guided year-round, ranger-led tours in summer.",
+      "source_urls": [
+        "https://www.nps.gov/places/maltese-cross-cabin.htm"
+      ]
+    },
+    {
+      "order": 3,
+      "id": "entrance-station",
+      "name": "South Unit Entrance Station (fee booth)",
+      "type": "entrance_station",
+      "lat": 46.91552,
+      "lon": -103.52707,
+      "coord_confidence": "med",
+      "coord_source": "OpenStreetMap (api.openstreetmap.org map download, 2026-10-10) node 923730093 (barrier=toll_booth)",
+      "road_segment": "stem",
+      "miles_from_visitor_center_clockwise": 0.02,
+      "miles_from_visitor_center_counterclockwise": 0.02,
+      "nearest_road_point": {
+        "lat": 46.91615,
+        "lon": -103.52584,
+        "distance_from_road_m": 116,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "right",
+      "must_leave_car": "Drive-through",
+      "restrooms": false,
+      "facilities": "Entrance fees collected here May-September; at the visitor center the rest of the year; self-pay drop box when closed",
+      "description": "Entrance pass required year-round ($30 private vehicle / 7 days; $25 motorcycle; $15 per person on foot or bike; $55 park annual). Cashless since May 1, 2026 (card or digital payment only).",
+      "source_urls": [
+        "https://www.nps.gov/thro/planyourvisit/fees.htm"
+      ]
+    },
+    {
+      "order": 4,
+      "id": "medora-overlook",
+      "name": "Medora Overlook",
+      "type": "overlook",
+      "lat": 46.91932,
+      "lon": -103.52615,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10; matches OSM node 927648403",
+      "road_segment": "stem",
+      "miles_from_visitor_center_clockwise": 0.34,
+      "miles_from_visitor_center_counterclockwise": 0.34,
+      "nearest_road_point": {
+        "lat": 46.9194,
+        "lon": -103.52592,
+        "distance_from_road_m": 20,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "left",
+      "must_leave_car": "Roadside pullout; view from car or a few steps",
+      "restrooms": false,
+      "facilities": "Pullout",
+      "description": "First pullout on the drive, overlooking the town of Medora and the Little Missouri River. Medora was named for the wife of the Marquis de Mores; before Medora, the rough settlement of Little Missouri stood on the west bank, where TR arrived on his first visit (NPS audio-tour place text).",
+      "source_urls": [
+        "https://www.nps.gov/places/medora-overlook.htm"
+      ]
+    },
+    {
+      "order": 5,
+      "id": "johnsons-plateau",
+      "name": "Johnson's Plateau prairie dog town (roadside pulloff)",
+      "type": "prairie_dog_town",
+      "lat": 46.93121,
+      "lon": -103.51423,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10 (\"Johnson's Plateau Roadside Pulloff\", stop on NPS South Unit audio tour)",
+      "road_segment": "stem",
+      "miles_from_visitor_center_clockwise": 3.19,
+      "miles_from_visitor_center_counterclockwise": 3.19,
+      "nearest_road_point": {
+        "lat": 46.93117,
+        "lon": -103.51423,
+        "distance_from_road_m": 4,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "right (roadside; side approximate)",
+      "must_leave_car": "Roadside pulloff; view from car",
+      "restrooms": false,
+      "facilities": "Pulloff",
+      "description": "Prairie dog colony on Johnson's Plateau. NPS text: black-tailed prairie dogs are rodents in the squirrel family; colonies (\"towns\") are organized into family groups called coteries. Wild horses frequent Johnson's Plateau per NPS 2025-26 GPS collar updates.",
+      "source_urls": [
+        "https://www.nps.gov/places/johnson-s-plateau-roadside-pulloff.htm",
+        "https://www.nps.gov/thro/learn/nature/horses.htm"
+      ]
+    },
+    {
+      "order": 6,
+      "id": "skyline-vista",
+      "name": "Skyline Vista",
+      "type": "overlook_trail",
+      "lat": 46.93409,
+      "lon": -103.53299,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10; OSM viewpoint 754702249 and parking way 1290864199",
+      "road_segment": "stem",
+      "miles_from_visitor_center_clockwise": 4.07,
+      "miles_from_visitor_center_counterclockwise": 4.07,
+      "nearest_road_point": {
+        "lat": 46.93556,
+        "lon": -103.53064,
+        "distance_from_road_m": 55,
+        "measured_from": "turnoff/parking: parking"
+      },
+      "side_of_road_clockwise": "left (roadside; side approximate)",
+      "must_leave_car": "0.1 mi paved accessible trail to overlook (NPS hiking page; park map says 0.2 mi out-and-back) ~10 min",
+      "restrooms": false,
+      "facilities": "Parking (auto + bus/RV), benches, exhibits, cell signal, wheelchair accessible",
+      "description": "One of the first trailheads visitors reach. Flat, paved trail atop Johnson's Plateau to an overlook of the Little Missouri River, the western horizon and surrounding badlands.",
+      "source_urls": [
+        "https://www.nps.gov/places/skyline-vista.htm",
+        "https://www.nps.gov/thro/planyourvisit/hiking-and-trail-information.htm"
+      ]
+    },
+    {
+      "order": 7,
+      "id": "river-overlook-cottonwood",
+      "name": "NPS audio tour \"conclusion\" stop / river-woodland viewpoint near Cottonwood",
+      "type": "overlook",
+      "lat": 46.94532,
+      "lon": -103.53191,
+      "coord_confidence": "med",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10 (\"Audio Tour Conclusion\", last stop of the NPS Scenic Loop Drive audio tour)",
+      "road_segment": "stem",
+      "miles_from_visitor_center_clockwise": 5.16,
+      "miles_from_visitor_center_counterclockwise": 5.16,
+      "nearest_road_point": {
+        "lat": 46.94525,
+        "lon": -103.5318,
+        "distance_from_road_m": 11,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "left (roadside; side approximate)",
+      "must_leave_car": "Roadside",
+      "restrooms": false,
+      "facilities": "Unknown",
+      "description": "NPS lists this point as the last stop of its own Scenic Loop Drive audio tour. NPS accessibility page also lists a \"River Woodland Overlook - sidewalk with view of the Little Missouri River\" among South Unit pullouts; it is PLAUSIBLY this spot above the river near Cottonwood but this is NOT confirmed - verify on site.",
+      "source_urls": [
+        "https://www.nps.gov/thro/planyourvisit/accessibility.htm"
+      ]
+    },
+    {
+      "order": 8,
+      "id": "cottonwood-campground",
+      "name": "Cottonwood Campground and picnic area",
+      "type": "campground",
+      "lat": 46.95003,
+      "lon": -103.53263,
+      "coord_confidence": "med",
+      "coord_source": "OpenStreetMap (api.openstreetmap.org map download, 2026-10-10) (campground parking way 505872472; campground area way 60510386 centroid 46.95050,-103.53167; entrance road way 9588439 leaves the drive at ~46.9492,-103.5298)",
+      "road_segment": "stem (spur ~0.15 mi to campground loop)",
+      "miles_from_visitor_center_clockwise": 5.45,
+      "miles_from_visitor_center_counterclockwise": 5.45,
+      "nearest_road_point": {
+        "lat": 46.94852,
+        "lon": -103.528,
+        "distance_from_road_m": 158,
+        "measured_from": "turnoff/parking: campground road junction"
+      },
+      "side_of_road_clockwise": "left (roadside; side approximate)",
+      "must_leave_car": "Drive in",
+      "restrooms": true,
+      "facilities": "Restrooms (two ADA-compliant), picnic area with accessible restrooms/pavilion, drinking water; primitive campground (no hookups), open year-round; all sites by reservation at recreation.gov (from May 1, 2026); group site; fills nightly in summer",
+      "description": "The South Unit's campground along the Little Missouri River cottonwood bottomland, on the west side of the drive. Not to be confused with the separate Roundup Group Horse Camp (reservation-only, off East River Road north of the loop).",
+      "source_urls": [
+        "https://www.nps.gov/thro/planyourvisit/cottonwood-campground.htm",
+        "https://www.nps.gov/thro/planyourvisit/south-unit.htm",
+        "https://www.nps.gov/thro/planyourvisit/accessibility.htm"
+      ]
+    },
+    {
+      "order": 9,
+      "id": "loop-junction",
+      "name": "Loop junction (East River Road / Scenic Loop Drive split)",
+      "type": "junction",
+      "lat": 46.95498,
+      "lon": -103.51196,
+      "coord_confidence": "med",
+      "coord_source": "Derived: point where OSRM outbound and return routes diverge; OSM way names change from East River Road to Scenic Loop Drive here",
+      "road_segment": "junction",
+      "miles_from_visitor_center_clockwise": 6.41,
+      "miles_from_visitor_center_counterclockwise": 28.49,
+      "nearest_road_point": {
+        "lat": 46.95498,
+        "lon": -103.51196,
+        "distance_from_road_m": 0,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": null,
+      "must_leave_car": "n/a",
+      "restrooms": false,
+      "facilities": "OSM shows a gate (node 12769470916) on the south branch right at the junction - purpose (seasonal/administrative) not documented by NPS",
+      "description": "End of the ~6.4-mile stem from Medora; the ~22-mile loop proper begins and ends here. Clockwise = keep left/north toward Peaceful Valley and Wind Canyon; counter-clockwise = south branch past the prairie dog town toward Scoria Point. This south branch (to the Old East Entrance pull-off) is the section rebuilt 2022-2025.",
+      "source_urls": [
+        "https://www.nps.gov/thro/learn/news/theodore-roosevelt-national-park-celebrates-completion-of-south-unit-scenic-road-repair-project.htm"
+      ]
+    },
+    {
+      "order": 10,
+      "id": "peaceful-valley-ranch",
+      "name": "Peaceful Valley Ranch",
+      "type": "historic_site",
+      "lat": 46.95895,
+      "lon": -103.50414,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10; OSM parking way 1378945653",
+      "road_segment": "loop - north branch, spur ~0.3 mi (asphalt) to the ranch",
+      "miles_from_visitor_center_clockwise": 6.77,
+      "miles_from_visitor_center_counterclockwise": 28.13,
+      "nearest_road_point": {
+        "lat": 46.95637,
+        "lon": -103.50477,
+        "distance_from_road_m": 208,
+        "measured_from": "turnoff/parking: ranch spur road junction (approx.)"
+      },
+      "side_of_road_clockwise": "left (roadside; side approximate)",
+      "must_leave_car": "Park and walk the boardwalk between ranch house and stable",
+      "restrooms": true,
+      "facilities": "Restroom, picnic table, exhibits, parking; separate Peaceful Valley picnic area service road nearby (OSM way 9591659). Guided horseback rides are NO LONGER offered (NPS pets/horse page: \"The park no longer offers guided trail rides\")",
+      "description": "Began as a cabin built in 1883 by Eldridge \"Gerry\" Paddock; ranch house c. 1885. Olsen family bought it in 1915 and ran it as a dude ranch. Sold to the federal government in 1936 and used as CCC/WPA/ERA headquarters; first park headquarters when Theodore Roosevelt National Memorial Park was established in 1947, until HQ moved to Medora in 1959. Concessioners ran horseback rides until 2014. Buildings recently renovated. Ekblom Trail starts here.",
+      "source_urls": [
+        "https://www.nps.gov/places/peaceful-valley-ranch.htm",
+        "https://www.nps.gov/thro/planyourvisit/pets.htm"
+      ]
+    },
+    {
+      "order": 11,
+      "id": "halliday-well-trailhead",
+      "name": "Halliday Well Trailhead (west end of Lower Paddock Creek Trail)",
+      "type": "trailhead",
+      "lat": 46.95258,
+      "lon": -103.49507,
+      "coord_confidence": "med",
+      "coord_source": "OpenStreetMap (api.openstreetmap.org map download, 2026-10-10) parking way 79450887 at end of Halliday Well Road (way 9590551, gravel)",
+      "road_segment": "loop - north branch, gravel spur ~0.44 mi",
+      "miles_from_visitor_center_clockwise": 6.98,
+      "miles_from_visitor_center_counterclockwise": 27.91,
+      "nearest_road_point": {
+        "lat": 46.95718,
+        "lon": -103.50037,
+        "distance_from_road_m": 0,
+        "measured_from": "turnoff/parking: Halliday Well Road junction"
+      },
+      "side_of_road_clockwise": "right (roadside; side approximate)",
+      "must_leave_car": "Backcountry trailhead",
+      "restrooms": true,
+      "facilities": "Accessible restroom (NPS accessibility page: restroom \"also at the Halliday Well Trailhead\"); gravel access road",
+      "description": "Trailhead for the Lower Paddock Creek Trail, which runs east to the Badlands Spur / Talkington parking area on the loop.",
+      "source_urls": [
+        "https://www.nps.gov/thro/planyourvisit/accessibility.htm"
+      ]
+    },
+    {
+      "order": 12,
+      "id": "lower-jones-creek-trailhead",
+      "name": "Lower Jones Creek Trailhead",
+      "type": "trailhead",
+      "lat": 46.96643,
+      "lon": -103.48717,
+      "coord_confidence": "med",
+      "coord_source": "OpenStreetMap (api.openstreetmap.org map download, 2026-10-10) parking node 754700016; Jones Creek Trail (way 60510408) meets the road here",
+      "road_segment": "loop - north branch",
+      "miles_from_visitor_center_clockwise": 7.89,
+      "miles_from_visitor_center_counterclockwise": 27.0,
+      "nearest_road_point": {
+        "lat": 46.96648,
+        "lon": -103.48735,
+        "distance_from_road_m": 15,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "right",
+      "must_leave_car": "Backcountry trail (Jones Creek Trail ~3.7 mi to Upper Jones Creek TH per project guide; NPS loop combos 11.4 mi)",
+      "restrooms": false,
+      "facilities": "Parking",
+      "description": "West end of the Jones Creek Trail, which follows a usually dry creek bed and bisects the loop to the Upper Jones Creek Trailhead.",
+      "source_urls": [
+        "https://www.nps.gov/thro/planyourvisit/hiking-and-trail-information.htm"
+      ]
+    },
+    {
+      "order": 13,
+      "id": "beef-corral-bottom",
+      "name": "Beef Corral Bottom prairie dog town",
+      "type": "prairie_dog_town",
+      "lat": 46.97856,
+      "lon": -103.49187,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10 (NPS audio-tour stop); OSM parking node 74553754",
+      "road_segment": "loop - north branch",
+      "miles_from_visitor_center_clockwise": 8.83,
+      "miles_from_visitor_center_counterclockwise": 26.06,
+      "nearest_road_point": {
+        "lat": 46.97846,
+        "lon": -103.49171,
+        "distance_from_road_m": 16,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "left",
+      "must_leave_car": "Sidewalk at roadside",
+      "restrooms": false,
+      "facilities": "Parking, trash; sidewalk with prairie dog viewing (wheelchair accessible per NPS)",
+      "description": "Overlooks one of the park's active prairie dog towns with the Little Missouri River beyond. NPS notes prairie grasslands here are threatened by non-native plants that outcompete natives.",
+      "source_urls": [
+        "https://www.nps.gov/places/beef-corral-bottom.htm",
+        "https://www.nps.gov/thro/planyourvisit/accessibility.htm"
+      ]
+    },
+    {
+      "order": 14,
+      "id": "wind-canyon",
+      "name": "Wind Canyon Trail",
+      "type": "overlook_trail",
+      "lat": 46.98868,
+      "lon": -103.48528,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10; OSM parking way 505872461",
+      "road_segment": "loop - north branch",
+      "miles_from_visitor_center_clockwise": 10.25,
+      "miles_from_visitor_center_counterclockwise": 24.64,
+      "nearest_road_point": {
+        "lat": 46.98868,
+        "lon": -103.48528,
+        "distance_from_road_m": 0,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "left (roadside; side approximate)",
+      "must_leave_car": "0.4 mi loop, ~20 min, dirt/gravel with stairs; sidewalk only is accessible",
+      "restrooms": false,
+      "facilities": "Parking (auto + bus/RV), trash",
+      "description": "Wind-sculpted sandstone canyon with hoodoos; hollows in the walls are nest sites for great horned owls. Trail climbs to one of the best views in the South Unit over the Little Missouri River. Ranger-favorite sunset spot.",
+      "source_urls": [
+        "https://www.nps.gov/places/wind-canyon.htm",
+        "https://www.nps.gov/thro/planyourvisit/hiking-and-trail-information.htm"
+      ]
+    },
+    {
+      "order": 15,
+      "id": "north-junction-east-river-road",
+      "name": "North junction - East River Road (gravel) continues north out of the park",
+      "type": "junction",
+      "lat": 46.99321,
+      "lon": -103.48747,
+      "coord_confidence": "med",
+      "coord_source": "OpenStreetMap (api.openstreetmap.org map download, 2026-10-10) way 60510458 (East River Road, gravel) start node",
+      "road_segment": "loop - north branch",
+      "miles_from_visitor_center_clockwise": 10.59,
+      "miles_from_visitor_center_counterclockwise": 24.31,
+      "nearest_road_point": {
+        "lat": 46.99321,
+        "lon": -103.48747,
+        "distance_from_road_m": 0,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": null,
+      "must_leave_car": "n/a",
+      "restrooms": false,
+      "facilities": "none",
+      "description": "The loop turns east; gravel East River Road continues north toward the park boundary and Roundup Group Horse Camp. NPS horse updates call this the \"Wind Canyon road junction\". OSM speed tagging changes here from 35 mph (west side) to 25 mph (east/south sides).",
+      "source_urls": []
+    },
+    {
+      "order": 16,
+      "id": "upper-jones-creek-trailhead",
+      "name": "Upper Jones Creek Trailhead",
+      "type": "trailhead",
+      "lat": 46.96854,
+      "lon": -103.4211,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10; OSM parking node 754701685, short gravel spur way 60510436 (~0.07 mi)",
+      "road_segment": "loop - northeast",
+      "miles_from_visitor_center_clockwise": 14.38,
+      "miles_from_visitor_center_counterclockwise": 20.51,
+      "nearest_road_point": {
+        "lat": 46.96938,
+        "lon": -103.42012,
+        "distance_from_road_m": 0,
+        "measured_from": "turnoff/parking: spur junction"
+      },
+      "side_of_road_clockwise": "right (roadside; side approximate)",
+      "must_leave_car": "Backcountry trail",
+      "restrooms": false,
+      "facilities": "Parking, trash",
+      "description": "Parking lot for the upper (east) end of the Jones Creek Trail.",
+      "source_urls": [
+        "https://www.nps.gov/places/upper-jones-creek-trailhead.htm"
+      ]
+    },
+    {
+      "order": 17,
+      "id": "boicourt-overlook",
+      "name": "Boicourt Overlook",
+      "type": "overlook",
+      "lat": 46.96301,
+      "lon": -103.4054,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10 (OSM has duplicate viewpoint nodes at 46.95824,-103.40450 and 46.96291,-103.40530)",
+      "road_segment": "loop - east",
+      "miles_from_visitor_center_clockwise": 15.4,
+      "miles_from_visitor_center_counterclockwise": 19.5,
+      "nearest_road_point": {
+        "lat": 46.96307,
+        "lon": -103.40523,
+        "distance_from_road_m": 15,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "right",
+      "must_leave_car": "Sidewalk at roadside",
+      "restrooms": false,
+      "facilities": "Parking (auto + bus/RV), exhibits, trash, cell signal, wheelchair accessible",
+      "description": "Panoramic view of the Little Missouri Badlands; on clear days you can see larger buttes beyond the park boundary. NPS quotes TR describing the badlands as \"a land of vast, silent spaces\" (verify exact wording/source before scripting).",
+      "source_urls": [
+        "https://www.nps.gov/places/boicourt-overlook.htm"
+      ]
+    },
+    {
+      "order": 18,
+      "id": "boicourt-trail",
+      "name": "Boicourt Trail",
+      "type": "overlook_trail",
+      "lat": 46.95937,
+      "lon": -103.40185,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10; OSM path 60510445 and parking 1154970503",
+      "road_segment": "loop - east",
+      "miles_from_visitor_center_clockwise": 15.7,
+      "miles_from_visitor_center_counterclockwise": 19.19,
+      "nearest_road_point": {
+        "lat": 46.95942,
+        "lon": -103.40181,
+        "distance_from_road_m": 7,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "right (roadside; side approximate)",
+      "must_leave_car": "0.2 mi accessible paved trail (~15 min) (park map says 0.3 mi out-and-back); unpaved continuation to another overlook",
+      "restrooms": false,
+      "facilities": "Parking (auto + bus/RV), trash, cell signal, wheelchair accessible",
+      "description": "Roughly halfway around the drive; paved trail out over the badlands. Ranger-favorite sunset overlook.",
+      "source_urls": [
+        "https://www.nps.gov/places/boicourt-trail.htm",
+        "https://www.nps.gov/thro/planyourvisit/hiking-and-trail-information.htm"
+      ]
+    },
+    {
+      "order": 19,
+      "id": "talkington-pulloff",
+      "name": "Talkington Trail roadside pulloff (Lower/Upper Talkington)",
+      "type": "trailhead",
+      "lat": 46.93997,
+      "lon": -103.3811,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10",
+      "road_segment": "loop - east",
+      "miles_from_visitor_center_clockwise": 17.64,
+      "miles_from_visitor_center_counterclockwise": 17.26,
+      "nearest_road_point": {
+        "lat": 46.93997,
+        "lon": -103.38108,
+        "distance_from_road_m": 1,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "right (roadside; side approximate)",
+      "must_leave_car": "Backcountry trail",
+      "restrooms": false,
+      "facilities": "Parking",
+      "description": "Access to the Jones Creek / Lower Talkington / Lower Paddock Creek loop (11.4 mi) and the Upper Paddock/Talkington loop (15.4 mi; 23.4 mi combined). Do not confuse with the separate Talkington trailhead off I-94 Exit 36 in the park's southeast, which NPS recommends for wild-horse viewing.",
+      "source_urls": [
+        "https://www.nps.gov/places/talkington-trail-roadside-pulloff.htm",
+        "https://www.nps.gov/thro/learn/nature/horses.htm"
+      ]
+    },
+    {
+      "order": 20,
+      "id": "buck-hill-turn",
+      "name": "Turn to Buck Hill (spur road)",
+      "type": "spur_junction",
+      "lat": 46.93466,
+      "lon": -103.38813,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10",
+      "road_segment": "loop - east",
+      "miles_from_visitor_center_clockwise": 18.21,
+      "miles_from_visitor_center_counterclockwise": 16.69,
+      "nearest_road_point": {
+        "lat": 46.93496,
+        "lon": -103.38794,
+        "distance_from_road_m": 36,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": null,
+      "must_leave_car": "n/a",
+      "restrooms": false,
+      "facilities": "OSM: Buck Hill Road, asphalt then compacted, maxspeed 15 mph (OSM, not NPS-confirmed)",
+      "description": "Turnoff for Buck Hill, \"the highest point in the park that can be accessed by road.\" The road winds just under a mile to the top (NPS); routed length ~0.8 mi one-way.",
+      "source_urls": [
+        "https://www.nps.gov/places/turn-to-buck-hill.htm"
+      ]
+    },
+    {
+      "order": 21,
+      "id": "buck-hill",
+      "name": "Buck Hill",
+      "type": "overlook_trail",
+      "lat": 46.92661,
+      "lon": -103.38979,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10; OSM peak node 357765274 (46.92557,-103.38879, ele 869 m) and parking 10751074925",
+      "road_segment": "spur (Buck Hill Road, ~0.8 mi one-way)",
+      "miles_from_visitor_center_clockwise": 18.21,
+      "miles_from_visitor_center_counterclockwise": 16.69,
+      "nearest_road_point": {
+        "lat": 46.93496,
+        "lon": -103.38794,
+        "distance_from_road_m": 36,
+        "measured_from": "turnoff/parking: turn to Buck Hill"
+      },
+      "side_of_road_clockwise": "left (roadside; side approximate)",
+      "must_leave_car": "Short, steep trail: 0.1-0.2 mi (NPS pages differ), paved and gravel with stairs; ~15 min",
+      "restrooms": false,
+      "facilities": "Parking, exhibits, trash, cell signal; sidewalk and exhibit accessible",
+      "description": "One of the highest points in the South Unit with 360-degree views from Painted Canyon to Boicourt. Ripples in the caprock show this hilltop was once an ancient streambed. Good stargazing. Elk are most often seen early morning/evening in the Buck Hill area.",
+      "source_urls": [
+        "https://www.nps.gov/places/buck-hill.htm",
+        "https://www.nps.gov/thro/planyourvisit/wildlife-viewing.htm"
+      ]
+    },
+    {
+      "order": 22,
+      "id": "restroom-buck-hill",
+      "name": "Accessible vault toilet near the Buck Hill road",
+      "type": "restroom",
+      "lat": 46.93481,
+      "lon": -103.4034,
+      "coord_confidence": "med",
+      "coord_source": "OpenStreetMap (api.openstreetmap.org map download, 2026-10-10) node 9371512275 (toilets, pit latrine, wheelchair=yes); NPS confirms \"accessible restroom near the road to Buck Hill, about midway around the loop\"",
+      "road_segment": "loop - east",
+      "miles_from_visitor_center_clockwise": 18.96,
+      "miles_from_visitor_center_counterclockwise": 15.94,
+      "nearest_road_point": {
+        "lat": 46.93364,
+        "lon": -103.40291,
+        "distance_from_road_m": 18,
+        "measured_from": "turnoff/parking: parking"
+      },
+      "side_of_road_clockwise": "right (roadside; side approximate)",
+      "must_leave_car": "Roadside",
+      "restrooms": true,
+      "facilities": "Accessible vault toilet (only restroom on the loop proper besides Peaceful Valley and Halliday Well)",
+      "description": "Mid-loop restroom stop.",
+      "source_urls": [
+        "https://www.nps.gov/thro/planyourvisit/accessibility.htm"
+      ]
+    },
+    {
+      "order": 23,
+      "id": "coal-vein-turn",
+      "name": "Turn to Coal Vein Trail (spur road)",
+      "type": "spur_junction",
+      "lat": 46.93147,
+      "lon": -103.41484,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10 (audio-tour place \"Coal Vein Trail Turn\")",
+      "road_segment": "loop - southeast",
+      "miles_from_visitor_center_clockwise": 19.65,
+      "miles_from_visitor_center_counterclockwise": 15.24,
+      "nearest_road_point": {
+        "lat": 46.93156,
+        "lon": -103.41484,
+        "distance_from_road_m": 10,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": null,
+      "must_leave_car": "n/a",
+      "restrooms": false,
+      "facilities": "Coal Vein Road ~0.82 mi one-way, surface \"compacted\" (unpaved) per OSM, OSM maxspeed 25 mph; ends in a turning circle",
+      "description": "Turnoff to the Coal Vein trailhead.",
+      "source_urls": [
+        "https://www.nps.gov/places/coal-vein-trail-turn.htm"
+      ]
+    },
+    {
+      "order": 24,
+      "id": "coal-vein-trail",
+      "name": "Coal Vein Trail",
+      "type": "nature_trail",
+      "lat": 46.92449,
+      "lon": -103.40189,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10 (Coal Vein Trailhead; 16 numbered trail posts also geolocated by NPS)",
+      "road_segment": "spur (Coal Vein Road, ~0.8 mi one-way)",
+      "miles_from_visitor_center_clockwise": 19.65,
+      "miles_from_visitor_center_counterclockwise": 15.24,
+      "nearest_road_point": {
+        "lat": 46.93156,
+        "lon": -103.41484,
+        "distance_from_road_m": 10,
+        "measured_from": "turnoff/parking: Coal Vein turn"
+      },
+      "side_of_road_clockwise": "left (roadside; side approximate)",
+      "must_leave_car": "0.6 mi inner loop / 0.8 mi outer loop, 30-45 min, stairs; self-guided with trail brochure",
+      "restrooms": false,
+      "facilities": "Parking, trailhead",
+      "description": "Rock layers tell ~60 million years of badlands history, from ancient swamps to recent coal fires. A lignite coal seam burned here from 1951 to 1977 (dates from project guide - verify with NPS brochure). Follow numbered posts, staying left. Wild horses frequently use the Coal Vein Trailhead area per 2025-26 NPS collar data.",
+      "source_urls": [
+        "https://www.nps.gov/places/coal-vein-trailhead.htm",
+        "https://www.nps.gov/thro/planyourvisit/hiking-and-trail-information.htm"
+      ]
+    },
+    {
+      "order": 25,
+      "id": "badlands-spur-trailhead",
+      "name": "Badlands Spur Trail / Talkington Trail parking (east end of Lower Paddock Creek Trail)",
+      "type": "trailhead",
+      "lat": 46.93452,
+      "lon": -103.42949,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10 (\"Badlands Spur Trail\"); OSM \"Talkington Trail Parking\" way 1154987020",
+      "road_segment": "loop - southeast",
+      "miles_from_visitor_center_clockwise": 20.57,
+      "miles_from_visitor_center_counterclockwise": 14.32,
+      "nearest_road_point": {
+        "lat": 46.93444,
+        "lon": -103.42944,
+        "distance_from_road_m": 9,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "right (roadside; side approximate)",
+      "must_leave_car": "Backcountry trails",
+      "restrooms": false,
+      "facilities": "Roadside parking",
+      "description": "Access to Lower Paddock Creek, Upper Paddock Creek and Talkington trails; hike out-and-back or link loops. This is the \"Lower Paddock / Paddock Creek\" trailhead on the loop (the west end is Halliday Well).",
+      "source_urls": [
+        "https://www.nps.gov/places/badlands-spur-trail.htm"
+      ]
+    },
+    {
+      "order": 26,
+      "id": "old-east-entrance",
+      "name": "Old East Entrance Station",
+      "type": "historic_site",
+      "lat": 46.90869,
+      "lon": -103.42221,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10; pull-off parking at 46.91242,-103.42933 (OSM way 1379009240); trail OSM way 1154993029",
+      "road_segment": "loop - south (rebuilt section begins at this pull-off)",
+      "miles_from_visitor_center_clockwise": 22.33,
+      "miles_from_visitor_center_counterclockwise": 12.57,
+      "nearest_road_point": {
+        "lat": 46.9125,
+        "lon": -103.42941,
+        "distance_from_road_m": 11,
+        "measured_from": "turnoff/parking: pull-off parking"
+      },
+      "side_of_road_clockwise": "left (roadside; side approximate)",
+      "must_leave_car": "0.4 mi each way (0.8 mi round trip) from the pull-off",
+      "restrooms": false,
+      "facilities": "Pull-off parking, exhibits",
+      "description": "Original park entrance station of hand-hewn local sandstone, built by the CCC in 1938 as a Depression relief project, set in an active prairie dog town. Entrance moved to Medora when I-94 replaced US Highway 10 (NPS gives 1968). Original stone sign now at Painted Canyon Visitor Center. NOTE: NPS page says CCC companies worked in the park \"1934 to 1931\" - an obvious typo; do not script that date range without verification.",
+      "source_urls": [
+        "https://www.nps.gov/places/old-east-entrance.htm"
+      ]
+    },
+    {
+      "order": 27,
+      "id": "prairie-ecosystems",
+      "name": "Prairie Ecosystems wayside",
+      "type": "wayside",
+      "lat": 46.91537,
+      "lon": -103.44567,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10 (audio-tour stop)",
+      "road_segment": "loop - south (rebuilt section)",
+      "miles_from_visitor_center_clockwise": 23.21,
+      "miles_from_visitor_center_counterclockwise": 11.69,
+      "nearest_road_point": {
+        "lat": 46.91543,
+        "lon": -103.44565,
+        "distance_from_road_m": 7,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "left (roadside; side approximate)",
+      "must_leave_car": "Roadside pulloff",
+      "restrooms": false,
+      "facilities": "Pulloff",
+      "description": "Wayside surrounded by mixed-grass prairie, which NPS calls one of the most diverse ecosystems in the world.",
+      "source_urls": [
+        "https://www.nps.gov/places/prairie-ecosystems.htm"
+      ]
+    },
+    {
+      "order": 28,
+      "id": "badlands-overlook",
+      "name": "Badlands Overlook (signed \"North Dakota Badlands Overlook\" - verify)",
+      "type": "overlook",
+      "lat": 46.92194,
+      "lon": -103.45221,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10; OSM viewpoint node 754704933 identical",
+      "road_segment": "loop - south (rebuilt section)",
+      "miles_from_visitor_center_clockwise": 23.78,
+      "miles_from_visitor_center_counterclockwise": 11.11,
+      "nearest_road_point": {
+        "lat": 46.92195,
+        "lon": -103.45221,
+        "distance_from_road_m": 1,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "left (roadside; side approximate)",
+      "must_leave_car": "Sidewalk at roadside",
+      "restrooms": false,
+      "facilities": "Sidewalk, exhibit, viewing area (wheelchair accessible)",
+      "description": "Panoramic look at the broken, rolling badlands; good for sunrise and spotting elk or bison. Closed 2019-2025 with the road failure. No separate \"North Dakota Badlands Overlook\" place exists in NPS or OSM data; treat the names as the same pullout unless confirmed otherwise.",
+      "source_urls": [
+        "https://www.nps.gov/places/badlands-overlook.htm",
+        "https://www.nps.gov/thro/planyourvisit/accessibility.htm"
+      ]
+    },
+    {
+      "order": 29,
+      "id": "ridgeline-nature-trail",
+      "name": "Ridgeline Nature Trail",
+      "type": "nature_trail",
+      "lat": 46.92189,
+      "lon": -103.46308,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10; OSM parking way 79292152",
+      "road_segment": "loop - south (rebuilt section)",
+      "miles_from_visitor_center_clockwise": 24.35,
+      "miles_from_visitor_center_counterclockwise": 10.54,
+      "nearest_road_point": {
+        "lat": 46.922,
+        "lon": -103.46299,
+        "distance_from_road_m": 14,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "left",
+      "must_leave_car": "0.6 mi loop, ~30 min, moderate-steep grades, stairs; brochure at trailhead",
+      "restrooms": false,
+      "facilities": "Trailhead parking",
+      "description": "Self-guided nature trail through badlands habitats. STATUS FLAG: NPS South Unit page (updated May 17, 2026) and trlibrary.com say the trail is \"currently inaccessible due to road collapse.\" May be stale closure-era wording; confirm with the park before scripting a stop.",
+      "source_urls": [
+        "https://www.nps.gov/places/ridgeline-nature-trail.htm",
+        "https://www.nps.gov/thro/planyourvisit/south-unit.htm"
+      ]
+    },
+    {
+      "order": 30,
+      "id": "unnamed-pullout-ridgeline-west",
+      "name": "Unnamed viewpoint pullout west of Ridgeline",
+      "type": "pullout",
+      "lat": 46.92403,
+      "lon": -103.46819,
+      "coord_confidence": "low",
+      "coord_source": "OpenStreetMap (api.openstreetmap.org map download, 2026-10-10) parking way 414866713 with viewpoint node 926000754 (46.91978,-103.46717)",
+      "road_segment": "loop - south (rebuilt section)",
+      "miles_from_visitor_center_clockwise": 24.66,
+      "miles_from_visitor_center_counterclockwise": 10.23,
+      "nearest_road_point": {
+        "lat": 46.92405,
+        "lon": -103.46818,
+        "distance_from_road_m": 2,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "left (roadside; side approximate)",
+      "must_leave_car": "Unknown",
+      "restrooms": false,
+      "facilities": "Parking",
+      "description": "Name unknown; possibly an added/expanded pullout from the 2022-25 rebuild.",
+      "source_urls": []
+    },
+    {
+      "order": 31,
+      "id": "scoria-point",
+      "name": "Scoria Point Overlook",
+      "type": "overlook",
+      "lat": 46.93148,
+      "lon": -103.48535,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10; OSM viewpoint 754699529, parking way 414866724",
+      "road_segment": "loop - south (rebuilt section)",
+      "miles_from_visitor_center_clockwise": 25.76,
+      "miles_from_visitor_center_counterclockwise": 9.13,
+      "nearest_road_point": {
+        "lat": 46.93143,
+        "lon": -103.48536,
+        "distance_from_road_m": 6,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "right (roadside; side approximate)",
+      "must_leave_car": "Sidewalk at roadside; short path",
+      "restrooms": false,
+      "facilities": "Sidewalk, exhibit, viewing area (wheelchair accessible); parking widened in the rebuild",
+      "description": "NPS: named for scoria, a reddish rock layer that often caps the tops of badlands buttes (the clinker/burned-lignite origin is standard badlands geology but is not stated on this NPS page - verify wording). View of broken badlands; watch for bison. Closed 2019-2025.",
+      "source_urls": [
+        "https://www.nps.gov/places/scoria-point-overlook.htm",
+        "https://www.nps.gov/thro/planyourvisit/accessibility.htm"
+      ]
+    },
+    {
+      "order": 32,
+      "id": "unnamed-pullout-scoria-west",
+      "name": "Unnamed viewpoint pullout west of Scoria Point",
+      "type": "pullout",
+      "lat": 46.93551,
+      "lon": -103.48952,
+      "coord_confidence": "low",
+      "coord_source": "OpenStreetMap (api.openstreetmap.org map download, 2026-10-10) viewpoint node 926000593 / parking way 414866712",
+      "road_segment": "loop - south (rebuilt section)",
+      "miles_from_visitor_center_clockwise": 26.33,
+      "miles_from_visitor_center_counterclockwise": 8.56,
+      "nearest_road_point": {
+        "lat": 46.93542,
+        "lon": -103.48959,
+        "distance_from_road_m": 11,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "right (roadside; side approximate)",
+      "must_leave_car": "Unknown",
+      "restrooms": false,
+      "facilities": "Parking",
+      "description": "Name unknown.",
+      "source_urls": []
+    },
+    {
+      "order": 33,
+      "id": "prairie-dog-town-junction",
+      "name": "Prairie Dog Colony Pulloff (prairie dog town near the loop junction)",
+      "type": "prairie_dog_town",
+      "lat": 46.95381,
+      "lon": -103.50922,
+      "coord_confidence": "high",
+      "coord_source": "NPS places API (developer.nps.gov/api/v1/places?parkCode=thro), read 2026-10-10; OSM parking way 505872477 and service loop 414866764",
+      "road_segment": "loop - south branch, ~0.1 mi from junction",
+      "miles_from_visitor_center_clockwise": 28.33,
+      "miles_from_visitor_center_counterclockwise": 6.56,
+      "nearest_road_point": {
+        "lat": 46.95385,
+        "lon": -103.50916,
+        "distance_from_road_m": 6,
+        "measured_from": "feature coordinate"
+      },
+      "side_of_road_clockwise": "left (roadside; side approximate)",
+      "must_leave_car": "Sidewalk and exhibits at roadside",
+      "restrooms": false,
+      "facilities": "Paved pullout with sidewalk and exhibits (wheelchair accessible per NPS)",
+      "description": "NPS accessibility page: \"Prairie Dog Town near the loop road junction - sidewalk and exhibits.\" Sits on the south branch just past the junction, so clockwise drivers reach it at the very end of the loop (or can visit it first with a 0.1-mile detour). NPS: do not feed prairie dogs; they can bite and may carry fleas that transmit plague.",
+      "source_urls": [
+        "https://www.nps.gov/places/prairie-dog-colony-pulloff.htm",
+        "https://www.nps.gov/thro/planyourvisit/accessibility.htm",
+        "https://www.nps.gov/thro/learn/nature/prairie-dogs.htm"
+      ]
+    }
+  ]
+}

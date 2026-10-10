@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Scenic Loop with Nora &amp; Wes</title>
+<meta name="description" content="A free GPS driving audio tour of the South Unit Scenic Loop in Theodore Roosevelt National Park, from the Theodore Roosevelt Presidential Library.">
+<meta name="theme-color" content="#25282A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Scenic Loop">
+<meta property="og:title" content="Scenic Loop with Nora & Wes">
+<meta property="og:description" content="A free GPS driving audio tour of Theodore Roosevelt National Park's South Unit, from the Theodore Roosevelt Presidential Library.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="media/photos/scenic-loop-drive-scenery.jpg">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<!-- ============ START SCREEN ============ -->
+<section id="start" class="screen start" aria-labelledby="start-title">
+  <div class="start-photo" style="background-image:url(media/photos/scenic-loop-drive-scenery.jpg)"></div>
+  <div class="start-body">
+    <p class="start-kicker">Theodore Roosevelt National Park, South Unit</p>
+    <h1 id="start-title">The Scenic Loop<br><span>with Nora &amp; Wes</span></h1>
+    <p class="start-lede">A free, GPS-guided audio tour of the 36-mile drive. Two friends, a car full of stories, and the land that changed Theodore Roosevelt.</p>
+
+    <ol class="start-steps">
+      <li id="step-download">
+        <div>
+          <strong>Download the tour</strong>
+          <span>Cell service is spotty in the park. Do this on Wi-Fi before you go.</span>
+        </div>
+        <button id="btn-download" class="btn btn-quiet">Download</button>
+        <div class="dl-bar" hidden><i></i></div>
+      </li>
+      <li>
+        <div>
+          <strong>Mount your phone</strong>
+          <span>On the dash or vent, where you can glance at it. Turn the volume up or connect to the car.</span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Start at the South Unit Visitor Center</strong>
+          <span>In Medora. Pay the park entrance fee (card only), then tap Start.</span>
+        </div>
+      </li>
+    </ol>
+
+    <div class="start-actions">
+      <button id="btn-start" class="btn btn-go">Start the tour</button>
+      <button id="btn-preview" class="btn btn-quiet">Preview the drive from home</button>
+    </div>
+    <p class="start-fine">The screen stays on and uses your location while the tour runs. Nothing is sent anywhere. Free from the <a href="https://www.trlibrary.com" target="_blank" rel="noopener">Theodore Roosevelt Presidential Library</a>. <a href="#" id="link-credits">Photo &amp; sound credits</a></p>
+  </div>
+</section>
+
+<!-- ============ DASHBOARD ============ -->
+<main id="dash" class="screen dash" hidden>
+  <div class="stage" id="stage">
+    <div class="photo" id="photo"><img id="photo-a" alt=""><img id="photo-b" alt=""></div>
+    <div class="stage-shade"></div>
+    <div class="stage-text">
+      <p class="place-meta" id="place-meta"></p>
+      <h2 class="place-name" id="place-name">Getting your location…</h2>
+      <div class="caption" id="caption" aria-live="polite">
+        <span class="who" id="cap-who"></span>
+        <p id="cap-text"></p>
+      </div>
+    </div>
+    <button class="credit-btn" id="photo-credit" aria-label="Photo credit"></button>
+  </div>
+
+  <aside class="side" id="side">
+    <div class="gauge" id="gauge" role="group" aria-label="Speed">
+      <div class="gauge-now"><b id="spd">–</b><small>mph</small></div>
+      <div class="gauge-limit"><span class="limit-sign" id="limit"><i>Speed limit</i><b>25</b></span></div>
+      <p class="gauge-msg" id="pace-msg">Tour pace</p>
+    </div>
+
+    <div class="map-wrap"><svg id="map" class="map" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" aria-label="Route map"></svg></div>
+
+    <div class="next" id="next">
+      <p class="next-label">Up next</p>
+      <p class="next-name" id="next-name">–</p>
+      <p class="next-dist"><b id="next-mi">–</b> <span id="next-side"></span></p>
+    </div>
+  </aside>
+
+  <!-- parked / interactive panel -->
+  <section class="parked" id="parked" hidden aria-label="You are parked">
+    <header>
+      <h3 id="parked-title">You're parked</h3>
+      <button class="x" id="parked-close" aria-label="Close">×</button>
+    </header>
+    <nav class="tabs" id="tabs" role="tablist"></nav>
+    <div class="tab-body" id="tab-body"></div>
+  </section>
+
+  <!-- strata progress ribbon -->
+  <footer class="ribbon" id="ribbon" aria-label="Tour progress">
+    <div class="strata"><i class="s1"></i><i class="s2"></i><i class="s3"></i><i class="s4"></i><i class="s5"></i></div>
+    <div class="ribbon-fill" id="ribbon-fill"></div>
+    <div class="ribbon-ticks" id="ribbon-ticks"></div>
+    <div class="ribbon-car" id="ribbon-car"></div>
+  </footer>
+
+  <div class="topbar">
+    <span class="badge" id="gps-badge" hidden>GPS weak</span>
+    <span class="badge sim" id="sim-badge" hidden>Preview</span>
+    <button class="icon-btn" id="btn-pause" aria-label="Pause narration">❚❚</button>
+    <button class="icon-btn" id="btn-menu" aria-label="Menu">≡</button>
+  </div>
+
+  <!-- wildlife picker -->
+  <section class="picker" id="picker" hidden aria-label="What are you seeing?">
+    <h3>What are you seeing?</h3>
+    <div class="picker-grid" id="picker-grid"></div>
+    <button class="btn btn-quiet" id="picker-close">Nothing — keep going</button>
+  </section>
+
+  <!-- menu -->
+  <section class="menu" id="menu" hidden>
+    <div class="menu-card">
+      <h3>Tour</h3>
+      <button class="btn btn-quiet" data-act="wildlife">I see wildlife</button>
+      <button class="btn btn-quiet" data-act="replay">Replay last story</button>
+      <button class="btn btn-quiet" data-act="skip">Skip this story</button>
+      <button class="btn btn-quiet" data-act="tally">Wildlife count</button>
+      <button class="btn btn-quiet" data-act="credits">Photo &amp; sound credits</button>
+      <button class="btn btn-quiet" data-act="end">End the tour</button>
+      <div class="sim-ctl" id="sim-ctl" hidden>
+        <h4>Preview controls</h4>
+        <label>Direction <select id="sim-dir"><option value="cw">Peaceful Valley first</option><option value="ccw">Scoria Point first</option></select></label>
+        <label>Speed-up <select id="sim-rate"><option>1</option><option>2</option><option selected>4</option><option>8</option><option>16</option></select></label>
+        <label><input type="checkbox" id="sim-stops" checked> Stop at pull-offs</label>
+        <label><input type="checkbox" id="sim-wild" checked> Wildlife slowdowns</label>
+        <label><input type="checkbox" id="sim-speeder"> Drive too fast sometimes</label>
+        <button class="btn btn-quiet" data-act="sim-restart">Restart preview</button>
+      </div>
+      <button class="btn" data-act="close">Close</button>
+    </div>
+  </section>
+</main>
+
+<dialog id="dlg"><div id="dlg-body"></div><form method="dialog"><button class="btn">Close</button></form></dialog>
+
+<script src="js/app.js"></script>
+</body>
+</html>

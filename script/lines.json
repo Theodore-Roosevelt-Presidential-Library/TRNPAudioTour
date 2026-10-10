@@ -1,0 +1,2882 @@
+[
+ {
+  "clip": "welcome",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Hey, welcome! I'm Nora.",
+  "file": "welcome--00--b7fc9a11ef.mp3",
+  "done": true
+ },
+ {
+  "clip": "welcome",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "And I'm Wes. We're riding along with you today, all the way around the Scenic Loop.",
+  "file": "welcome--01--17a8a17672.mp3",
+  "done": true
+ },
+ {
+  "clip": "welcome",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Thirty-six miles of the North Dakota Badlands. Buttes, prairie dog towns, bison, wild horses —",
+  "file": "welcome--02--40c1b814c6.mp3",
+  "done": true
+ },
+ {
+  "clip": "welcome",
+  "i": 3,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "— and a guy from New York City who showed up here at three in the morning and never really got over it.",
+  "file": "welcome--03--f44592c586.mp3",
+  "done": true
+ },
+ {
+  "clip": "welcome",
+  "i": 4,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "[laughs] That's the short version of Theodore Roosevelt, yes.",
+  "file": "welcome--04--b7ee2e6299.mp3",
+  "done": true
+ },
+ {
+  "clip": "welcome",
+  "i": 5,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Quick ground rules before we roll. Mount the phone where you can glance at it, but don't drive by it. The screen does its thing on its own while you're moving. When you park, it opens up — photos, maps, little games.",
+  "file": "welcome--05--702fd79795.mp3",
+  "done": true
+ },
+ {
+  "clip": "welcome",
+  "i": 6,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "We talk when there's something worth talking about. You just drive. GPS tells us where you are, so the stories show up right where they belong.",
+  "file": "welcome--06--55667e7b20.mp3",
+  "done": true
+ },
+ {
+  "clip": "welcome",
+  "i": 7,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "And we're timed for the speed limit. Go too fast and you'll drive right past half the good stuff. The bison aren't in a hurry. Neither are we.",
+  "file": "welcome--07--388dbdc050.mp3",
+  "done": true
+ },
+ {
+  "clip": "welcome",
+  "i": 8,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "One more. Out here, every animal gets at least twenty-five yards. That's about two school buses. More is better. If an animal moves away from you, you're too close.",
+  "file": "welcome--08--4476b3856a.mp3",
+  "done": true
+ },
+ {
+  "clip": "welcome",
+  "i": 9,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Okay. Windows down if the weather's nice. Let's go find some bison.",
+  "file": "welcome--09--41cfbb493c.mp3",
+  "done": true
+ },
+ {
+  "clip": "vc-cabin",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Before you pull out — see the little log cabin behind the visitor center? That's the Maltese Cross Cabin. Roosevelt's first home out here.",
+  "file": "vc-cabin--00--9e1498f982.mp3",
+  "done": true
+ },
+ {
+  "clip": "vc-cabin",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "It's not where it started, though.",
+  "file": "vc-cabin--01--8e44d0eacb.mp3",
+  "done": true
+ },
+ {
+  "clip": "vc-cabin",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Not even close. It stood about seven miles south of Medora on his first ranch. He'd bought into it in 1883, on his very first trip — about fourteen thousand dollars for cattle and a brand.",
+  "file": "vc-cabin--02--c2f9cb0113.mp3",
+  "done": true
+ },
+ {
+  "clip": "vc-cabin",
+  "i": 3,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "And the brand was a Maltese cross. Which the locals called the \"MAWL-tee\" cross.",
+  "file": "vc-cabin--03--07e97eb443.mp3",
+  "done": true
+ },
+ {
+  "clip": "vc-cabin",
+  "i": 4,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Because they figured \"maltese\" had to be plural. Roosevelt was amused enough to put it in his autobiography.",
+  "file": "vc-cabin--04--254f7990a4.mp3",
+  "done": true
+ },
+ {
+  "clip": "vc-cabin",
+  "i": 5,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "[chuckles] Then the cabin went on tour.",
+  "file": "vc-cabin--05--30b3614a8b.mp3",
+  "done": true
+ },
+ {
+  "clip": "vc-cabin",
+  "i": 6,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "It really did. The 1904 World's Fair in St. Louis. The 1905 exposition in Portland, Oregon. Then Fargo, and the state capitol grounds in Bismarck. It finally came here in 1959.",
+  "file": "vc-cabin--06--87affd60f3.mp3",
+  "done": true
+ },
+ {
+  "clip": "vc-cabin",
+  "i": 7,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Look for the old graffiti on the door from all that traveling. And his trunk is inside — the real one, with \"T.R.\" on it.",
+  "file": "vc-cabin--07--e0afb9d1d9.mp3",
+  "done": true
+ },
+ {
+  "clip": "vc-cabin",
+  "i": 8,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "It's a two-minute walk. Worth it. We'll be right here when you get back.",
+  "file": "vc-cabin--08--e11f16099f.mp3",
+  "done": true
+ },
+ {
+  "clip": "medora-overlook",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "That's Medora down there, along the river.",
+  "file": "medora-overlook--00--dfd9680541.mp3",
+  "done": true
+ },
+ {
+  "clip": "medora-overlook",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Which, when Roosevelt first got off the train, wasn't really a town yet.",
+  "file": "medora-overlook--01--7e2a111ab0.mp3",
+  "done": true
+ },
+ {
+  "clip": "medora-overlook",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Right. The train stopped at a place called Little Missouri, on the other bank. A station and a ramshackle hotel. Medora was brand new — a Frenchman, the Marquis de Mo-RESS, had just started it.",
+  "file": "medora-overlook--02--c2da7735de.mp3",
+  "done": true
+ },
+ {
+  "clip": "medora-overlook",
+  "i": 3,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Named for his wife, Medora.",
+  "file": "medora-overlook--03--4b4fc8de69.mp3",
+  "done": true
+ },
+ {
+  "clip": "medora-overlook",
+  "i": 4,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Roosevelt even put that in the preface of his first ranch book — \"for the benefit of the future local historian.\"",
+  "file": "medora-overlook--04--cd7851ded9.mp3",
+  "done": true
+ },
+ {
+  "clip": "medora-overlook",
+  "i": 5,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "[laughs] Hi. That's us.",
+  "file": "medora-overlook--05--45fbb67f2c.mp3",
+  "done": true
+ },
+ {
+  "clip": "medora-overlook",
+  "i": 6,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "The Marquis built a meatpacking plant. The idea was to slaughter cattle right here and ship the beef east in refrigerated rail cars.",
+  "file": "medora-overlook--06--7712203105.mp3",
+  "done": true
+ },
+ {
+  "clip": "medora-overlook",
+  "i": 7,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Bold idea. Didn't work. Within about three years it had collapsed. But the brick chimney's still standing in town. Look for it when you're back in Medora.",
+  "file": "medora-overlook--07--f14fd9d482.mp3",
+  "done": true
+ },
+ {
+  "clip": "johnsons-plateau",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Okay, eyes right and left — this is Johnson's Plateau. First prairie dog town of the day.",
+  "file": "johnsons-plateau--00--1ca6a0cec2.mp3",
+  "done": true
+ },
+ {
+  "clip": "johnsons-plateau",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Look for the little dirt mounds. And the little heads popping out of them.",
+  "file": "johnsons-plateau--01--f0270baf60.mp3",
+  "done": true
+ },
+ {
+  "clip": "johnsons-plateau",
+  "i": 2,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "These are black-tailed prairie dogs. Not dogs. Rodents. Squirrel family, one to three pounds.",
+  "file": "johnsons-plateau--02--b39dcf7e49.mp3",
+  "done": true
+ },
+ {
+  "clip": "johnsons-plateau",
+  "i": 3,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Roosevelt was a fan.",
+  "file": "johnsons-plateau--03--9707f2834c.mp3",
+  "done": true
+ },
+ {
+  "clip": "johnsons-plateau",
+  "i": 4,
+  "speaker": "Q",
+  "voiceId": 78,
+  "text": "Prairie-dogs are abundant all over the cattle country; they are in shape like little woodchucks, and are the most noisy and inquisitive animals imaginable.",
+  "file": "johnsons-plateau--04--d61bcb2447.mp3",
+  "done": true
+ },
+ {
+  "clip": "johnsons-plateau",
+  "i": 5,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Noisy and inquisitive. Accurate. They live in family groups called KOH-tuh-reez, and when two from the same family meet, they greet each other with a little kiss.",
+  "file": "johnsons-plateau--05--b971f779e1.mp3",
+  "done": true
+ },
+ {
+  "clip": "johnsons-plateau",
+  "i": 6,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Stop it.",
+  "file": "johnsons-plateau--06--69c2145492.mp3",
+  "done": true
+ },
+ {
+  "clip": "johnsons-plateau",
+  "i": 7,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "It's true! Park Service says so.",
+  "file": "johnsons-plateau--07--012b4a6778.mp3",
+  "done": true
+ },
+ {
+  "clip": "skyline-vista",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Skyline Vista's coming up. This is a good first stop — a short, paved walk out to the edge, and the whole river valley opens up.",
+  "file": "skyline-vista--00--8256658e19.mp3",
+  "done": true
+ },
+ {
+  "clip": "skyline-vista",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Here's a fun one for the walk. Roosevelt's first night out here.",
+  "file": "skyline-vista--01--90f899f116.mp3",
+  "done": true
+ },
+ {
+  "clip": "skyline-vista",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "September of 1883. Northern Pacific train pulls in around three in the morning. He's twenty-four. He came to hunt a bison before they were all gone.",
+  "file": "skyline-vista--02--184dc2ff4a.mp3",
+  "done": true
+ },
+ {
+  "clip": "skyline-vista",
+  "i": 3,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "And the only building besides the station is a place called the Pyramid Park Hotel.",
+  "file": "skyline-vista--03--ce122bfa03.mp3",
+  "done": true
+ },
+ {
+  "clip": "skyline-vista",
+  "i": 4,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Which he described as \"ramshackle.\" He slept in a room with fourteen beds.",
+  "file": "skyline-vista--04--a2aba5f9e2.mp3",
+  "done": true
+ },
+ {
+  "clip": "skyline-vista",
+  "i": 5,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Fourteen. That's not a hotel room. That's a bunkhouse with a sign.",
+  "file": "skyline-vista--05--4922b5e9a0.mp3",
+  "done": true
+ },
+ {
+  "clip": "skyline-vista",
+  "i": 6,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "[laughs] And yet he kept coming back for years.",
+  "file": "skyline-vista--06--570975e3b6.mp3",
+  "done": true
+ },
+ {
+  "clip": "skyline-parked",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Nice, you stopped. The trail's flat and paved — just a few minutes out and back.",
+  "file": "skyline-parked--00--f9e6bcf39f.mp3",
+  "done": true
+ },
+ {
+  "clip": "skyline-parked",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "That's the river valley he first rode into. And if you need a signal for anything, this is one of the few spots out here that usually has one.",
+  "file": "skyline-parked--01--ee0a022b7f.mp3",
+  "done": true
+ },
+ {
+  "clip": "river-cottonwoods",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Down to your left, that line of big trees — that's the Little Missouri River. Those are cottonwoods.",
+  "file": "river-cottonwoods--00--b1fe5c1bbb.mp3",
+  "done": true
+ },
+ {
+  "clip": "river-cottonwoods",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "The river's the only water in the park with fish in it. Some summers it's barely a trickle. Spring, it can flood.",
+  "file": "river-cottonwoods--01--04324bbcb1.mp3",
+  "done": true
+ },
+ {
+  "clip": "river-cottonwoods",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "And in winter it freezes solid. Roosevelt had a great line about that, from his ranch.",
+  "file": "river-cottonwoods--02--88eb47494c.mp3",
+  "done": true
+ },
+ {
+  "clip": "river-cottonwoods",
+  "i": 3,
+  "speaker": "Q",
+  "voiceId": 78,
+  "text": "The river lay in its bed fixed and immovable as a bar of bent steel, and then at night wolves and lynxes traveled up and down it as if it had been a highway passing in front of the ranch house.",
+  "file": "river-cottonwoods--03--75120ae493.mp3",
+  "done": true
+ },
+ {
+  "clip": "river-cottonwoods",
+  "i": 4,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "No wolves now. But here's a tip — look up in those cottonwoods. Way up. Sometimes there's a dark lump in the branches.",
+  "file": "river-cottonwoods--04--faa16c73ea.mp3",
+  "done": true
+ },
+ {
+  "clip": "river-cottonwoods",
+  "i": 5,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Porcupine.",
+  "file": "river-cottonwoods--05--ebd2cd5a6e.mp3",
+  "done": true
+ },
+ {
+  "clip": "river-cottonwoods",
+  "i": 6,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Porcupine. Easiest in fall and winter when the leaves are down. A baby is called a por-kyoo-PET.",
+  "file": "river-cottonwoods--06--8595f342b1.mp3",
+  "done": true
+ },
+ {
+  "clip": "river-cottonwoods",
+  "i": 7,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "You just like saying por-kyoo-PET.",
+  "file": "river-cottonwoods--07--5a092a0c1a.mp3",
+  "done": true
+ },
+ {
+  "clip": "river-cottonwoods",
+  "i": 8,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Everybody likes saying por-kyoo-PET.",
+  "file": "river-cottonwoods--08--f31c1e9118.mp3",
+  "done": true
+ },
+ {
+  "clip": "loop-junction",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Here's where the loop starts. You can go either way.",
+  "file": "loop-junction--00--230ede1d67.mp3",
+  "done": true
+ },
+ {
+  "clip": "loop-junction",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "One way heads to Peaceful Valley and Wind Canyon. The other goes past a big prairie dog town toward Scoria Point.",
+  "file": "loop-junction--01--9e7317cfef.mp3",
+  "done": true
+ },
+ {
+  "clip": "loop-junction",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Doesn't matter which. It all comes back around to this same spot. We'll figure out which way you went and follow along.",
+  "file": "loop-junction--02--e39f995e52.mp3",
+  "done": true
+ },
+ {
+  "clip": "pd-junction",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Big prairie dog town right here, with a pull-off and a sidewalk. If you've got two minutes, this is the one to stop at.",
+  "file": "pd-junction--00--f4cb25c06b.mp3",
+  "done": true
+ },
+ {
+  "clip": "pd-junction",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Listen for the alarms. Their barks sound more like squeaks. And they have different calls for different threats — a hawk, a coyote, a person.",
+  "file": "pd-junction--01--c1812fae75.mp3",
+  "done": true
+ },
+ {
+  "clip": "pd-junction",
+  "i": 2,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Then there's my favorite. The jump-yip. One prairie dog stretches straight up, throws its arms in the air, and yips —",
+  "file": "pd-junction--02--1e156c04db.mp3",
+  "done": true
+ },
+ {
+  "clip": "pd-junction",
+  "i": 3,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "— and then the next one does it, and the next one —",
+  "file": "pd-junction--03--aea6d9dc19.mp3",
+  "done": true
+ },
+ {
+  "clip": "pd-junction",
+  "i": 4,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "— like a stadium wave! Scientists think it's how they check whether the neighbors are paying attention.",
+  "file": "pd-junction--04--f9f4a5dc36.mp3",
+  "done": true
+ },
+ {
+  "clip": "pd-junction",
+  "i": 6,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Here's a number. The Park Service says that in 1901, scientists surveyed one prairie dog town that covered twenty-five thousand square miles. An estimated four hundred million prairie dogs.",
+  "file": "pd-junction--06--25813d3518.mp3",
+  "done": true
+ },
+ {
+  "clip": "pd-junction",
+  "i": 7,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "One town.",
+  "file": "pd-junction--07--2c8a4b04fc.mp3",
+  "done": true
+ },
+ {
+  "clip": "pd-junction",
+  "i": 8,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "One town. Poisoning campaigns wiped most of them out.",
+  "file": "pd-junction--08--8b33c92505.mp3",
+  "done": true
+ },
+ {
+  "clip": "pd-junction",
+  "i": 9,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "And please don't feed them. They bite, human food makes them sick, and their fleas can carry plague. Just watch.",
+  "file": "pd-junction--09--9fa8dae3cf.mp3",
+  "done": true
+ },
+ {
+  "clip": "pd-junction-parked",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Stay on the sidewalk and give them a minute. They'll forget you're here.",
+  "file": "pd-junction-parked--00--1a58f3823e.mp3",
+  "done": true
+ },
+ {
+  "clip": "pd-junction-parked",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "While you watch — prairie dogs keep the grass short and fresh, and that pulls in bison. Bison love to roll in the loose dirt here. That's a wallow.",
+  "file": "pd-junction-parked--01--e115fa381c.mp3",
+  "done": true
+ },
+ {
+  "clip": "pd-junction-parked",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "And keep an eye on the edges of the town at dawn and dusk. Coyotes and badgers hunt here. Sometimes together.",
+  "file": "pd-junction-parked--02--5245a40b62.mp3",
+  "done": true
+ },
+ {
+  "clip": "peaceful-valley",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Peaceful Valley Ranch is up here. Restrooms, too, if anybody's asking.",
+  "file": "peaceful-valley--00--b26a8350a9.mp3",
+  "done": true
+ },
+ {
+  "clip": "peaceful-valley",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Somebody's always asking.",
+  "file": "peaceful-valley--01--ca19656b20.mp3",
+  "done": true
+ },
+ {
+  "clip": "peaceful-valley",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "This one's not a Roosevelt place, but it's a great story. It's the only original ranch house left in this part of the park — built around 1885.",
+  "file": "peaceful-valley--02--9b3194a7cc.mp3",
+  "done": true
+ },
+ {
+  "clip": "peaceful-valley",
+  "i": 3,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "And in 1918 the family who owned it started one of the first dude ranches around.",
+  "file": "peaceful-valley--03--b4566bc2ad.mp3",
+  "done": true
+ },
+ {
+  "clip": "peaceful-valley",
+  "i": 4,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Easterners paying to come out and play cowboy. Which, honestly, is a little bit what Roosevelt did.",
+  "file": "peaceful-valley--04--f18987a5cf.mp3",
+  "done": true
+ },
+ {
+  "clip": "peaceful-valley",
+  "i": 5,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "[laughs] Don't let him hear you say that.",
+  "file": "peaceful-valley--05--5beaafef63.mp3",
+  "done": true
+ },
+ {
+  "clip": "peaceful-valley",
+  "i": 6,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Later the government bought it. In the 1930s it housed Depression-era work crews, and then it was the park's first headquarters, until the visitor center in Medora opened in 1959.",
+  "file": "peaceful-valley--06--e4e24b68e9.mp3",
+  "done": true
+ },
+ {
+  "clip": "peaceful-valley",
+  "i": 7,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "They ran trail rides out of here until 2014. No rides now, but the buildings are still here, and the cottonwoods are huge.",
+  "file": "peaceful-valley--07--6fbc179d41.mp3",
+  "done": true
+ },
+ {
+  "clip": "beef-corral",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Another prairie dog town coming up — Beef Corral Bottom. Scan the far edges of this one.",
+  "file": "beef-corral--00--46b97a1c9e.mp3",
+  "done": true
+ },
+ {
+  "clip": "beef-corral",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "For what?",
+  "file": "beef-corral--01--bbedd17d51.mp3",
+  "done": true
+ },
+ {
+  "clip": "beef-corral",
+  "i": 2,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Pronghorn. Tan and white, with a black face mask. They only wander into the park now and then, but this is one of their spots.",
+  "file": "beef-corral--02--8c63c9d519.mp3",
+  "done": true
+ },
+ {
+  "clip": "beef-corral",
+  "i": 3,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "They're the fast ones.",
+  "file": "beef-corral--03--7f5a64f283.mp3",
+  "done": true
+ },
+ {
+  "clip": "beef-corral",
+  "i": 4,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Fastest land animal in North America. Up to fifty-five miles an hour. Second fastest on the planet, behind the cheetah.",
+  "file": "beef-corral--04--56fd9982ab.mp3",
+  "done": true
+ },
+ {
+  "clip": "beef-corral",
+  "i": 5,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "And they're not actually antelope, right?",
+  "file": "beef-corral--05--910f54a1fa.mp3",
+  "done": true
+ },
+ {
+  "clip": "beef-corral",
+  "i": 6,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Nope. They're the last surviving species in their whole family. And they're the only animal that sheds the outer part of its horns every year.",
+  "file": "beef-corral--06--035f3c0f25.mp3",
+  "done": true
+ },
+ {
+  "clip": "beef-corral",
+  "i": 7,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "You're going to be insufferable today.",
+  "file": "beef-corral--07--9c636e4878.mp3",
+  "done": true
+ },
+ {
+  "clip": "beef-corral",
+  "i": 8,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "I've been insufferable for years.",
+  "file": "beef-corral--08--16a727579b.mp3",
+  "done": true
+ },
+ {
+  "clip": "wind-canyon",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Wind Canyon is next, and this one you have to get out for.",
+  "file": "wind-canyon--00--679270d090.mp3",
+  "done": true
+ },
+ {
+  "clip": "wind-canyon",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Short trail, about twenty minutes. And at the top you're looking straight down at a big bend in the Little Missouri.",
+  "file": "wind-canyon--01--aa0d7ab4fd.mp3",
+  "done": true
+ },
+ {
+  "clip": "wind-canyon",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "The canyon itself is soft sandstone, and the wind has been sanding it for — well, forever. Look at the walls. They're full of little hollows.",
+  "file": "wind-canyon--02--4003b1027a.mp3",
+  "done": true
+ },
+ {
+  "clip": "wind-canyon",
+  "i": 3,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Great horned owls nest in those.",
+  "file": "wind-canyon--03--e96ec0bb53.mp3",
+  "done": true
+ },
+ {
+  "clip": "wind-canyon",
+  "i": 4,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Roosevelt has a line for a place like this.",
+  "file": "wind-canyon--04--3a5e08b422.mp3",
+  "done": true
+ },
+ {
+  "clip": "wind-canyon",
+  "i": 5,
+  "speaker": "Q",
+  "voiceId": 78,
+  "text": "... so fantastically broken in form and so bizarre in color as to seem hardly properly to belong to this earth.",
+  "file": "wind-canyon--05--679820d002.mp3",
+  "done": true
+ },
+ {
+  "clip": "wind-canyon",
+  "i": 6,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Also — if it's early morning or near sunset, look down along the river bottoms for elk. This is one of the best spots in the park for them.",
+  "file": "wind-canyon--06--4f8640e799.mp3",
+  "done": true
+ },
+ {
+  "clip": "wind-canyon-parked",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Okay, the trail's dirt and gravel with a few stairs, and it's short. Wear real shoes if the ground's wet — this clay gets slick.",
+  "file": "wind-canyon-parked--00--78e53328ec.mp3",
+  "done": true
+ },
+ {
+  "clip": "wind-canyon-parked",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "The sidewalk at the start is level, if you just want the view. Go on. We'll wait.",
+  "file": "wind-canyon-parked--01--ec725cc33c.mp3",
+  "done": true
+ },
+ {
+  "clip": "north-junction",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Heads up — there's a gravel road here that keeps going north out of the park. Stay on the paved loop.",
+  "file": "north-junction--00--393370c801.mp3",
+  "done": true
+ },
+ {
+  "clip": "north-junction",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Pavement good. Gravel, not today.",
+  "file": "north-junction--01--a57c0340ad.mp3",
+  "done": true
+ },
+ {
+  "clip": "jones-creek-ccc",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "This area along Jones Creek — there used to be a camp near here. Young men from the Civilian Conservation Corps.",
+  "file": "jones-creek-ccc--00--3f85868607.mp3",
+  "done": true
+ },
+ {
+  "clip": "jones-creek-ccc",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "The Depression program. Put young guys to work on public lands.",
+  "file": "jones-creek-ccc--01--9c8501a2d6.mp3",
+  "done": true
+ },
+ {
+  "clip": "jones-creek-ccc",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Three companies worked in these badlands in the 1930s, about two hundred men each. One camped near Jones Creek until late 1941.",
+  "file": "jones-creek-ccc--02--84911ee420.mp3",
+  "done": true
+ },
+ {
+  "clip": "jones-creek-ccc",
+  "i": 3,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Pay was thirty dollars a month, and most of it got sent home to their families.",
+  "file": "jones-creek-ccc--03--a5234dd41e.mp3",
+  "done": true
+ },
+ {
+  "clip": "jones-creek-ccc",
+  "i": 4,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "They built parts of the roads and trails we're on today. They cut sandstone by hand. One of them said later —",
+  "file": "jones-creek-ccc--04--92f58bdaa9.mp3",
+  "done": true
+ },
+ {
+  "clip": "jones-creek-ccc",
+  "i": 5,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "\"You learned how to live with other men, you learned self esteem...  you learned about yourself.\"",
+  "file": "jones-creek-ccc--05--8f6c56df6d.mp3",
+  "done": true
+ },
+ {
+  "clip": "jones-creek-ccc",
+  "i": 6,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "That's a good line.",
+  "file": "jones-creek-ccc--06--905078dbb4.mp3",
+  "done": true
+ },
+ {
+  "clip": "jones-creek-ccc",
+  "i": 7,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "They also built the old stone entrance station on the south side of the loop. It's still standing.",
+  "file": "jones-creek-ccc--07--befcfd3e02.mp3",
+  "done": true
+ },
+ {
+  "clip": "boicourt",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Boicourt Overlook. If you only stop at a couple of places today, make this one of them.",
+  "file": "boicourt--00--f0bb697842.mp3",
+  "done": true
+ },
+ {
+  "clip": "boicourt",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "It's right off the road, flat, and the view goes on forever. On a clear day you can see big buttes way outside the park.",
+  "file": "boicourt--01--4a11833a60.mp3",
+  "done": true
+ },
+ {
+  "clip": "boicourt",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "This is where I always think of Roosevelt's own description. It's from his autobiography, written decades after he left.",
+  "file": "boicourt--02--562f6c679d.mp3",
+  "done": true
+ },
+ {
+  "clip": "boicourt",
+  "i": 3,
+  "speaker": "Q",
+  "voiceId": 78,
+  "text": "It was a land of vast silent spaces, of lonely rivers, and of plains where the wild game stared at the passing horseman.",
+  "file": "boicourt--03--4a85bd62a5.mp3",
+  "done": true
+ },
+ {
+  "clip": "boicourt",
+  "i": 4,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "\"The wild game stared at the passing horseman.\" Still true. And the flats north of here are a good place to look for wild horses and pronghorn.",
+  "file": "boicourt--04--90c3fd113e.mp3",
+  "done": true
+ },
+ {
+  "clip": "boicourt",
+  "i": 5,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Also — you'll probably have cell signal here. Good time to send that photo.",
+  "file": "boicourt--05--5531d25f62.mp3",
+  "done": true
+ },
+ {
+  "clip": "boicourt-parked",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "There's a paved trail that heads out along the ridge from here. Short, mostly level, and the view gets better the farther you go.",
+  "file": "boicourt-parked--00--8937b2892b.mp3",
+  "done": true
+ },
+ {
+  "clip": "boicourt-parked",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "It's a great sunset spot, too. If it's evening, stay a while.",
+  "file": "boicourt-parked--01--ced4572867.mp3",
+  "done": true
+ },
+ {
+  "clip": "buck-hill-invite",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Turn coming up for Buck Hill. I'm going to lobby hard for this one.",
+  "file": "buck-hill-invite--00--3de415b62f.mp3",
+  "done": true
+ },
+ {
+  "clip": "buck-hill-invite",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "He really is.",
+  "file": "buck-hill-invite--01--34004dd33d.mp3",
+  "done": true
+ },
+ {
+  "clip": "buck-hill-invite",
+  "i": 2,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "It's a short side road, under a mile, steep and curvy at the end, so go slow. It's the highest point in the park you can drive to. Three-hundred-sixty-degree view.",
+  "file": "buck-hill-invite--02--ec69d8abd3.mp3",
+  "done": true
+ },
+ {
+  "clip": "buck-hill-invite",
+  "i": 3,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "And it's one of the best places to spot wild horses from above.",
+  "file": "buck-hill-invite--03--e9aa4e3cec.mp3",
+  "done": true
+ },
+ {
+  "clip": "buck-hill-invite",
+  "i": 4,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Take the turn, and we'll tell you the weird thing about the rocks at the top.",
+  "file": "buck-hill-invite--04--bfd26a8db4.mp3",
+  "done": true
+ },
+ {
+  "clip": "buck-hill-top",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Okay. Look down at the rock at the top. See the little ridges in it? Like the sand at the bottom of a creek?",
+  "file": "buck-hill-top--00--6722780aaa.mp3",
+  "done": true
+ },
+ {
+  "clip": "buck-hill-top",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Oh, those are ripples.",
+  "file": "buck-hill-top--01--aff6b7b5b4.mp3",
+  "done": true
+ },
+ {
+  "clip": "buck-hill-top",
+  "i": 2,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Ripple marks. This hilltop — the highest point around — used to be the bottom of a stream.",
+  "file": "buck-hill-top--02--9bf0febe86.mp3",
+  "done": true
+ },
+ {
+  "clip": "buck-hill-top",
+  "i": 3,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "That's wild.",
+  "file": "buck-hill-top--03--e005c8231d.mp3",
+  "done": true
+ },
+ {
+  "clip": "buck-hill-top",
+  "i": 4,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "The land here was a flat, swampy delta. Rivers coming off the young Rocky Mountains dumped layer after layer of mud and sand. Then a river started cutting down through it all, and here we are, standing on the old streambed.",
+  "file": "buck-hill-top--04--df7a728bd6.mp3",
+  "done": true
+ },
+ {
+  "clip": "buck-hill-top",
+  "i": 5,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Come back on a clear night, too. No big city for over thirty miles. You can see the Milky Way. Sometimes even the northern lights.",
+  "file": "buck-hill-top--05--926ae54bb6.mp3",
+  "done": true
+ },
+ {
+  "clip": "coal-vein-invite",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Here's the turn for the Coal Vein. It's a short gravel road to a trailhead.",
+  "file": "coal-vein-invite--00--b50f632b08.mp3",
+  "done": true
+ },
+ {
+  "clip": "coal-vein-invite",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Okay, quick story to decide if you want to go. In 1951, a seam of coal underground here caught fire. Probably lightning.",
+  "file": "coal-vein-invite--01--2add2d3382.mp3",
+  "done": true
+ },
+ {
+  "clip": "coal-vein-invite",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "And it burned for twenty-six years.",
+  "file": "coal-vein-invite--02--fe08c72f89.mp3",
+  "done": true
+ },
+ {
+  "clip": "coal-vein-invite",
+  "i": 3,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Twenty-six years! People came to watch the smoke and the glowing coals. Some of them roasted marshmallows over it.",
+  "file": "coal-vein-invite--03--440da9f29d.mp3",
+  "done": true
+ },
+ {
+  "clip": "coal-vein-invite",
+  "i": 4,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Over a coal fire in a national park.",
+  "file": "coal-vein-invite--04--84996ff4f5.mp3",
+  "done": true
+ },
+ {
+  "clip": "coal-vein-invite",
+  "i": 5,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "It was a different time. The trail walks you right through where the ground collapsed as the coal burned away.",
+  "file": "coal-vein-invite--05--8c76478f3a.mp3",
+  "done": true
+ },
+ {
+  "clip": "coal-vein-trail",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "The trail's a loop with numbered posts and some stairs. Stay left and follow the posts.",
+  "file": "coal-vein-trail--00--45114ce2ef.mp3",
+  "done": true
+ },
+ {
+  "clip": "coal-vein-trail",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "The guide says before the fire, the ground was level with the top of the stairs.",
+  "file": "coal-vein-trail--01--6293fa76c5.mp3",
+  "done": true
+ },
+ {
+  "clip": "coal-vein-trail",
+  "i": 2,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "So everything below that just — burned and sank.",
+  "file": "coal-vein-trail--02--b9eea5af25.mp3",
+  "done": true
+ },
+ {
+  "clip": "coal-vein-trail",
+  "i": 3,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Look for two other things. The red rock is coal-fire rock — baked clay. Geologists call it clinker. Folks around here call it scoria.",
+  "file": "coal-vein-trail--03--205e80c031.mp3",
+  "done": true
+ },
+ {
+  "clip": "coal-vein-trail",
+  "i": 4,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "And the gray stuff that looks like popcorn? That's bentonite. Old volcanic ash. When it gets wet, it can soak up five times its weight in water and turns into slick, sticky mud.",
+  "file": "coal-vein-trail--04--d25659fe1c.mp3",
+  "done": true
+ },
+ {
+  "clip": "coal-vein-trail",
+  "i": 5,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Which is why whole hillsides out here slowly slide.",
+  "file": "coal-vein-trail--05--8386034b8a.mp3",
+  "done": true
+ },
+ {
+  "clip": "coal-vein-trail",
+  "i": 6,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Roosevelt had a coal vein on his ranch, too. They dug it out of the hillside to heat the house.",
+  "file": "coal-vein-trail--06--69d3a6cbe3.mp3",
+  "done": true
+ },
+ {
+  "clip": "old-east-entrance",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "This one was built by the Civilian Conservation Corps — young men put to work during the Depression. The Old East Entrance Station.",
+  "file": "old-east-entrance--00--133cdaaa74.mp3",
+  "done": true
+ },
+ {
+  "clip": "old-east-entrance",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Pull-off's right on the road, and the old stone station is a short walk out through a prairie dog town.",
+  "file": "old-east-entrance--01--6f18f0140a.mp3",
+  "done": true
+ },
+ {
+  "clip": "old-east-entrance",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "They built it in 1938, out of local sandstone they shaped by hand. For about thirty years this was the main way in.",
+  "file": "old-east-entrance--02--6efe7accbd.mp3",
+  "done": true
+ },
+ {
+  "clip": "old-east-entrance",
+  "i": 3,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Then the interstate came through, and the entrance moved to Medora.",
+  "file": "old-east-entrance--03--f76478b9b3.mp3",
+  "done": true
+ },
+ {
+  "clip": "old-east-entrance",
+  "i": 4,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "So now it's just sitting out here in the grass. I love it.",
+  "file": "old-east-entrance--04--d08e51fa23.mp3",
+  "done": true
+ },
+ {
+  "clip": "old-east-entrance",
+  "i": 5,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Badgers hunt this prairie dog town at sunrise. Coyotes sometimes hang around close by, waiting to grab whatever the badger flushes out.",
+  "file": "old-east-entrance--05--a676a6b86d.mp3",
+  "done": true
+ },
+ {
+  "clip": "old-east-entrance",
+  "i": 6,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Teamwork.",
+  "file": "old-east-entrance--06--45caf6f926.mp3",
+  "done": true
+ },
+ {
+  "clip": "old-east-entrance",
+  "i": 7,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Sort of. Nobody asked the prairie dogs.",
+  "file": "old-east-entrance--07--6f1d4c0ea7.mp3",
+  "done": true
+ },
+ {
+  "clip": "badlands-overlook",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Badlands Overlook is up here. Great place to read the rock layers like a book.",
+  "file": "badlands-overlook--00--f585bcba5c.mp3",
+  "done": true
+ },
+ {
+  "clip": "badlands-overlook",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Okay, teach me.",
+  "file": "badlands-overlook--01--e34af2063b.mp3",
+  "done": true
+ },
+ {
+  "clip": "badlands-overlook",
+  "i": 2,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Lower down, the brighter yellow and tan layers — that's one formation. Higher up, the grayer, browner stuff is another. All of it is mud, sand and volcanic ash that washed east off the Rocky Mountains, somewhere around fifty-five to sixty million years ago.",
+  "file": "badlands-overlook--02--9ba50eac67.mp3",
+  "done": true
+ },
+ {
+  "clip": "badlands-overlook",
+  "i": 3,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "And the dark stripes?",
+  "file": "badlands-overlook--03--f03bf01b0c.mp3",
+  "done": true
+ },
+ {
+  "clip": "badlands-overlook",
+  "i": 4,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Coal. Old swamp plants, squeezed down over millions of years.",
+  "file": "badlands-overlook--04--08d3ee9c1d.mp3",
+  "done": true
+ },
+ {
+  "clip": "badlands-overlook",
+  "i": 5,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "So why is it all carved up like this?",
+  "file": "badlands-overlook--05--13ba73a738.mp3",
+  "done": true
+ },
+ {
+  "clip": "badlands-overlook",
+  "i": 6,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Glaciers. The Little Missouri used to flow north, toward Hudson Bay. Ice sheets blocked it and pushed it east. The new route was steeper, so the river started cutting down fast — and it's been carving these badlands ever since.",
+  "file": "badlands-overlook--06--84aad4350e.mp3",
+  "done": true
+ },
+ {
+  "clip": "ridgeline",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "That's the Ridgeline Nature Trail. Check the sign at the trailhead before you head out — it's been closed at times.",
+  "file": "ridgeline--00--2ed540bb6b.mp3",
+  "done": true
+ },
+ {
+  "clip": "ridgeline",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Here's something you can see from the car, though. Look at a butte. One side's dark green with little trees. The other side's bare.",
+  "file": "ridgeline--01--4e7bf65fef.mp3",
+  "done": true
+ },
+ {
+  "clip": "ridgeline",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Oh, yeah.",
+  "file": "ridgeline--02--5748c09564.mp3",
+  "done": true
+ },
+ {
+  "clip": "ridgeline",
+  "i": 3,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "The green side faces north. Less sun, more moisture, so junipers can grow there. The south side bakes. Those junipers even help slow the erosion, so the north faces aren't as steep.",
+  "file": "ridgeline--03--e5edb1154b.mp3",
+  "done": true
+ },
+ {
+  "clip": "ridgeline",
+  "i": 4,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Once you see it, you can't unsee it.",
+  "file": "ridgeline--04--0ea4fa3b4e.mp3",
+  "done": true
+ },
+ {
+  "clip": "rebuilt-road",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Fun fact about this stretch of road. For years, you couldn't drive it.",
+  "file": "rebuilt-road--00--031e0db576.mp3",
+  "done": true
+ },
+ {
+  "clip": "rebuilt-road",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "In 2019, heavy rain soaked the hillsides and sections of road just — slid down the slope.",
+  "file": "rebuilt-road--01--c6cb3265c4.mp3",
+  "done": true
+ },
+ {
+  "clip": "rebuilt-road",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Why does that keep happening out here?",
+  "file": "rebuilt-road--02--13cc2528bd.mp3",
+  "done": true
+ },
+ {
+  "clip": "rebuilt-road",
+  "i": 3,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "A big part of it is bentonite. It's old volcanic ash in the rock. Soak it and it turns slick, and whole hillsides slowly slide. Engineers found more unstable ground, and you couldn't drive the full loop for six years. The fix ran more than six miles and cost about fifty-one million dollars.",
+  "file": "rebuilt-road--03--b027a60759.mp3",
+  "done": true
+ },
+ {
+  "clip": "rebuilt-road",
+  "i": 4,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "One senator said it was almost like building a bridge.",
+  "file": "rebuilt-road--04--a3afe58eef.mp3",
+  "done": true
+ },
+ {
+  "clip": "rebuilt-road",
+  "i": 5,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "It reopened in late 2025, in the middle of the first big snow of the winter. So if anybody who visited a few years ago tells you the loop's closed — not anymore.",
+  "file": "rebuilt-road--05--5d6353f08b.mp3",
+  "done": true
+ },
+ {
+  "clip": "scoria-point",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Scoria Point's next. See the red caps on top of the buttes?",
+  "file": "scoria-point--00--391d5ca707.mp3",
+  "done": true
+ },
+ {
+  "clip": "scoria-point",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "That's coal-fire rock. Geologists call it clinker. When a coal seam burns underground, it bakes the clay above it into a natural brick. It's harder than the rock around it, so it sits on top like a helmet while everything below erodes away.",
+  "file": "scoria-point--01--6aa23cdc84.mp3",
+  "done": true
+ },
+ {
+  "clip": "scoria-point",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Roosevelt noticed it.",
+  "file": "scoria-point--02--3aade58e3a.mp3",
+  "done": true
+ },
+ {
+  "clip": "scoria-point",
+  "i": 3,
+  "speaker": "Q",
+  "voiceId": 78,
+  "text": "When a coal vein gets on fire it makes what is called a burning mine, and the clay above it is turned into brick; so that where water wears away the side of a hill sharp streaks of black and red are seen across it, mingled with the grays, purples, and browns.",
+  "file": "scoria-point--03--74afc2bd00.mp3",
+  "done": true
+ },
+ {
+  "clip": "scoria-point",
+  "i": 4,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Nailed it. Although — he also thought some of these buttes were volcanic.",
+  "file": "scoria-point--04--aab9361bf9.mp3",
+  "done": true
+ },
+ {
+  "clip": "scoria-point",
+  "i": 5,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "They're not.",
+  "file": "scoria-point--05--8e5c18c24d.mp3",
+  "done": true
+ },
+ {
+  "clip": "scoria-point",
+  "i": 6,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "They're not. Real scoria is volcanic rock. The name just stuck. Watch for bison on these slopes, too.",
+  "file": "scoria-point--06--d80be7c7dd.mp3",
+  "done": true
+ },
+ {
+  "clip": "closing",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "That's the loop. We're heading back toward Medora.",
+  "file": "closing--00--78cf36e0bb.mp3",
+  "done": true
+ },
+ {
+  "clip": "closing",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Before we get there, one more story. The winter of 1886.",
+  "file": "closing--01--27bb0b0de8.mp3",
+  "done": true
+ },
+ {
+  "clip": "closing",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "The storms started in November and didn't stop. Roosevelt wrote that by January, the drifts had filled the ravines almost level.",
+  "file": "closing--02--58f8cc226b.mp3",
+  "done": true
+ },
+ {
+  "clip": "closing",
+  "i": 3,
+  "speaker": "Q",
+  "voiceId": 78,
+  "text": "The starving cattle died by scores of thousands before their helpless owners' eyes.",
+  "file": "closing--03--770d87dd6f.mp3",
+  "done": true
+ },
+ {
+  "clip": "closing",
+  "i": 4,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "The Park Service says he lost around sixty percent of his cattle.",
+  "file": "closing--04--792006fe5a.mp3",
+  "done": true
+ },
+ {
+  "clip": "closing",
+  "i": 5,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "He held on for years, but his cattle business never really recovered. And yet, for the rest of his life, he talked about this place like it made him.",
+  "file": "closing--05--20fce5b364.mp3",
+  "done": true
+ },
+ {
+  "clip": "closing",
+  "i": 6,
+  "speaker": "Q",
+  "voiceId": 78,
+  "text": "I owe more than I can ever express to the West, which of course means to the men and women I met in the West.",
+  "file": "closing--06--1945055a3f.mp3",
+  "done": true
+ },
+ {
+  "clip": "closing",
+  "i": 7,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Hey — check the screen for our wildlife count. Let's see how we did.",
+  "file": "closing--07--f03c686dd8.mp3",
+  "done": true
+ },
+ {
+  "clip": "closing",
+  "i": 8,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "And if you want the rest of the story, the Theodore Roosevelt Presidential Library is right there in Medora.",
+  "file": "closing--08--ee7b2e345e.mp3",
+  "done": true
+ },
+ {
+  "clip": "closing",
+  "i": 9,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Thanks for riding with us.",
+  "file": "closing--09--e406ec309e.mp3",
+  "done": true
+ },
+ {
+  "clip": "closing",
+  "i": 10,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Come back and do it again at sunset. It's a whole different park.",
+  "file": "closing--10--be2da6d1ee.mp3",
+  "done": true
+ },
+ {
+  "clip": "closing",
+  "i": 11,
+  "speaker": "Q",
+  "voiceId": 78,
+  "text": "... we felt the beat of hardy life in our veins, and ours was the glory of work and the joy of living.",
+  "file": "closing--11--dc2383b710.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-bison-hunt",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "So, why did Roosevelt come out here in the first place?",
+  "file": "story-bison-hunt--00--80a8015245.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-bison-hunt",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "To shoot a bison.",
+  "file": "story-bison-hunt--01--69c93e9a67.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-bison-hunt",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "To shoot a bison. He'd heard they were nearly gone, and he wanted one before they were. He hired a local guide named Joe Ferris.",
+  "file": "story-bison-hunt--02--53a95c3197.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-bison-hunt",
+  "i": 3,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "And then it rained.",
+  "file": "story-bison-hunt--03--0b3c35186c.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-bison-hunt",
+  "i": 4,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "For days. Cold rain, mud, nothing. Ferris was pretty sure this skinny New Yorker with the glasses would quit.",
+  "file": "story-bison-hunt--04--eac094b87b.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-bison-hunt",
+  "i": 5,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "He didn't.",
+  "file": "story-bison-hunt--05--5bed3ebc16.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-bison-hunt",
+  "i": 6,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "He didn't. They finally found a bull, and when it went down, Roosevelt did a victory dance around it — right there in the mud — and handed Ferris a hundred dollars.",
+  "file": "story-bison-hunt--06--45dc6fdb00.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-bison-hunt",
+  "i": 7,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Ferris said later, \"I never saw any one so enthused in my life.\"",
+  "file": "story-bison-hunt--07--4ac70530ff.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-bison-hunt",
+  "i": 8,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "And before he even left for home, he bought into a cattle ranch.",
+  "file": "story-bison-hunt--08--5aeb1605e8.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-feb-1884",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "This one's harder.",
+  "file": "story-feb-1884--00--34cf26351e.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-feb-1884",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Go ahead.",
+  "file": "story-feb-1884--01--4cacdfe88f.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-feb-1884",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "In February of 1884, Roosevelt was in Albany when he got word to come home. His wife, Alice, had just had their daughter. His mother was sick.",
+  "file": "story-feb-1884--02--138652bfbb.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-feb-1884",
+  "i": 3,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "And he got there in time for both.",
+  "file": "story-feb-1884--03--8fc38767fe.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-feb-1884",
+  "i": 4,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "His mother died early in the morning on February fourteenth. His wife died that afternoon. Same day. Same house.",
+  "file": "story-feb-1884--04--72a7ee38c4.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-feb-1884",
+  "i": 5,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Wow.",
+  "file": "story-feb-1884--05--eb430afbae.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-feb-1884",
+  "i": 6,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "In his diary he drew a big X, and wrote one line.",
+  "file": "story-feb-1884--06--60a0294592.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-feb-1884",
+  "i": 7,
+  "speaker": "Q",
+  "voiceId": 78,
+  "text": "The light has gone out of my life.",
+  "file": "story-feb-1884--07--50bc0df800.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-feb-1884",
+  "i": 8,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "And that summer, he came back out here.",
+  "file": "story-feb-1884--08--7fc72edc65.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-feb-1884",
+  "i": 9,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "He did. To work. To ride. To be somewhere big enough to hold it, I think.",
+  "file": "story-feb-1884--09--a857fe5628.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-elkhorn",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Tell the beaver one.",
+  "file": "story-elkhorn--00--c5e939e9c6.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-elkhorn",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "[laughs] Okay. Roosevelt started a second ranch about thirty-five miles north of Medora — the Elkhorn. He brought two friends out from the Maine woods to build it, Bill Sewall and Wilmot Dow.",
+  "file": "story-elkhorn--01--06750b2ad2.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-elkhorn",
+  "i": 2,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Real lumberjacks.",
+  "file": "story-elkhorn--02--c17bfde9b0.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-elkhorn",
+  "i": 3,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Real lumberjacks. They're cutting cottonwood logs, and somebody asks Dow how it's going. And not knowing Roosevelt can hear him, he says —",
+  "file": "story-elkhorn--03--a68a3f4572.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-elkhorn",
+  "i": 4,
+  "speaker": "Q",
+  "voiceId": 78,
+  "text": "Well, Bill cut down fifty-three, I cut forty-nine, and the boss he beavered down seventeen.",
+  "file": "story-elkhorn--04--94d69bfdc9.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-elkhorn",
+  "i": 5,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "[laughs] Beavered!",
+  "file": "story-elkhorn--05--80971c692b.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-elkhorn",
+  "i": 6,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "And Roosevelt loved it so much he put it in his autobiography. He said anyone who's seen a tree chewed down by a beaver would understand exactly what Dow meant.",
+  "file": "story-elkhorn--06--f04a62493f.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-boat-thieves",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Okay, my favorite. The boat thieves.",
+  "file": "story-boat-thieves--00--f00a4ea294.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-boat-thieves",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Spring of 1886. Somebody steals the boat from Roosevelt's ranch.",
+  "file": "story-boat-thieves--01--9c04527d79.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-boat-thieves",
+  "i": 2,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "And he's a deputy sheriff now, so of course he goes after them.",
+  "file": "story-boat-thieves--02--4be94c64bc.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-boat-thieves",
+  "i": 3,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "He and his two ranch hands from Maine build a new boat, and float down the icy river after them. A few days later they catch three thieves at their camp.",
+  "file": "story-boat-thieves--03--c894e32430.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-boat-thieves",
+  "i": 4,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "And then they're stuck. Ice jams. For days. Guarding three prisoners in the freezing cold.",
+  "file": "story-boat-thieves--04--670f313b4d.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-boat-thieves",
+  "i": 5,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "And what does Roosevelt do to pass the time?",
+  "file": "story-boat-thieves--05--70aebc0d2a.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-boat-thieves",
+  "i": 6,
+  "speaker": "Q",
+  "voiceId": 78,
+  "text": "As for me, I had brought with me Anna Karenina, and my surroundings were quite gray enough to harmonize well with Tolstoy.",
+  "file": "story-boat-thieves--06--66e84f802d.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-boat-thieves",
+  "i": 7,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "[laughs] He's reading Tolstoy while guarding outlaws.",
+  "file": "story-boat-thieves--07--173efff0c3.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-boat-thieves",
+  "i": 8,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Then he took them overland to the jail in Dickinson by wagon, walking behind with his rifle. He stayed awake about thirty-six hours straight. And for all that, he collected about fifty dollars in fees.",
+  "file": "story-boat-thieves--08--a89d8900b1.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-horses",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Let's talk horses. You might see some today — they're all over this part of the park.",
+  "file": "story-horses--00--e2b9b3aae4.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-horses",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Where did they even come from?",
+  "file": "story-horses--01--8f76e63fe8.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-horses",
+  "i": 2,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Historians trace them to ranch horses, and horses from the tribes in the area. When the park fenced its boundary back in the 1950s, some of them ended up inside.",
+  "file": "story-horses--02--dab4735417.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-horses",
+  "i": 3,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "And they've been here ever since.",
+  "file": "story-horses--03--89a0ed3615.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-horses",
+  "i": 4,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Pretty much. Families of them, with a lead stallion, living out here on their own. The Park Service manages them as a cultural resource — part of the history of the place.",
+  "file": "story-horses--04--89b88beb77.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-horses",
+  "i": 5,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "There was a real fight over them a few years ago.",
+  "file": "story-horses--05--42556aed61.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-horses",
+  "i": 6,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "There was. The park looked at removing them, and people spoke up — a lot of people. In 2024 the Park Service committed to keeping a herd here.",
+  "file": "story-horses--06--22888b9871.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-horses",
+  "i": 7,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "How many are there?",
+  "file": "story-horses--07--ad0eacfc99.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-horses",
+  "i": 8,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "About two hundred. One researcher called them \"living history.\" I like that.",
+  "file": "story-horses--08--0bd0d3ee48.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-bison-comeback",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "When Roosevelt got here, the bison were nearly gone.",
+  "file": "story-bison-comeback--00--bd08886442.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-bison-comeback",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "How bad was it?",
+  "file": "story-bison-comeback--01--52982d68ab.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-bison-comeback",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "The Park Service says by about 1900, the great herds of millions were down to roughly three hundred animals.",
+  "file": "story-bison-comeback--02--9705bbfc81.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-bison-comeback",
+  "i": 3,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Three hundred. Down from millions.",
+  "file": "story-bison-comeback--03--bbe9461fa5.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-bison-comeback",
+  "i": 4,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "When this park was created, there were none here. Zero. Then in 1956, twenty-nine bison came up from a wildlife refuge in Nebraska.",
+  "file": "story-bison-comeback--04--d8fe14772d.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-bison-comeback",
+  "i": 5,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "And now there are a few hundred in this part of the park alone. So many that every few years they round some up and send them to new homes.",
+  "file": "story-bison-comeback--05--b2c0a49671.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-bison-comeback",
+  "i": 6,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "More than nine out of ten of those bison have gone to tribal nations.",
+  "file": "story-bison-comeback--06--3ec9abedad.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-bison-comeback",
+  "i": 7,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "That's a good story.",
+  "file": "story-bison-comeback--07--99d5db75f3.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-bison-comeback",
+  "i": 8,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "It's a good story. Now — two thousand pounds, can run thirty-five miles an hour. Stay in the car.",
+  "file": "story-bison-comeback--08--3524a8f82f.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-park-founding",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Here's a great one. Back in 1928, the Park Service sent an official out to see if this place should be a national park.",
+  "file": "story-park-founding--00--b7a551ad01.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-park-founding",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "And?",
+  "file": "story-park-founding--01--c15d18449e.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-park-founding",
+  "i": 2,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "He wrote, quote, \"A national park does not seem to be justified.\"",
+  "file": "story-park-founding--02--f200841d7e.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-park-founding",
+  "i": 3,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "[laughs] Oops.",
+  "file": "story-park-founding--03--d5415cf6ef.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-park-founding",
+  "i": 4,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "North Dakotans kept pushing anyway. In 1947, President Truman signed it into law as Theodore Roosevelt National Memorial Park. The only memorial park in the whole system.",
+  "file": "story-park-founding--04--c902225dde.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-park-founding",
+  "i": 5,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "And it became a full national park in 1978.",
+  "file": "story-park-founding--05--f42b1b65f1.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-park-founding",
+  "i": 6,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Today more than seven hundred thousand people a year come through. So, you know. Justified.",
+  "file": "story-park-founding--06--7dc9587060.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-elk",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Elk are back in the park, too. They were gone from this whole region by the late 1800s.",
+  "file": "story-elk--00--a7e5bfc89c.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-elk",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "They came back in 1985, from Wind Cave National Park in South Dakota. And they did really well.",
+  "file": "story-elk--01--a5aaf826e5.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-elk",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Too well?",
+  "file": "story-elk--02--bb81bf9180.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-elk",
+  "i": 3,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Kind of. Without wolves or grizzly bears out here anymore, there's little to keep their numbers down. So the park has to manage the herd itself.",
+  "file": "story-elk--03--4f77e3c953.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-elk",
+  "i": 4,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "When's the best time to see them?",
+  "file": "story-elk--04--21234eaab6.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-elk",
+  "i": 5,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Early morning and around sunset. And in September, listen for the bulls bugling.",
+  "file": "story-elk--05--fa6d901c02.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-meadowlark",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Listen for this one when you stop. Roosevelt loved it.",
+  "file": "story-meadowlark--00--e582a922c5.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-meadowlark",
+  "i": 2,
+  "speaker": "Q",
+  "voiceId": 78,
+  "text": "One of our sweetest, loudest songsters is the meadow-lark...",
+  "file": "story-meadowlark--02--8f9c19506f.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-meadowlark",
+  "i": 3,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "He said the eastern ones back home only chattered. But out here —",
+  "file": "story-meadowlark--03--c396553b91.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-meadowlark",
+  "i": 4,
+  "speaker": "Q",
+  "voiceId": 78,
+  "text": "... the plains air seems to give it a voice, and it will perch on the top of a bush or tree and sing for hours in rich, bubbling tones.",
+  "file": "story-meadowlark--04--8a302c3f17.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-meadowlark",
+  "i": 5,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Western meadowlark. North Dakota's state bird.",
+  "file": "story-meadowlark--05--18e4afa3ca.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-meadowlark",
+  "i": 6,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Yellow chest, black V. Usually sitting right on top of a fence post or a bush, singing its heart out.",
+  "file": "story-meadowlark--06--e954ba7bbd.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-lonely-plains",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Can I read you one more of his?",
+  "file": "story-lonely-plains--00--379b7dca8f.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-lonely-plains",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "You've got a whole stack of notecards. Of course you can.",
+  "file": "story-lonely-plains--01--741ff8bfbc.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-lonely-plains",
+  "i": 2,
+  "speaker": "Q",
+  "voiceId": 78,
+  "text": "Nowhere, not even at sea, does a man feel more lonely than when riding over the far-reaching, seemingly never-ending plains; and, after a man has lived a little while on or near them, their very vastness and loneliness and their melancholy monotony have a strong fascination for him.",
+  "file": "story-lonely-plains--02--4c250ddd62.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-lonely-plains",
+  "i": 3,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Huh. I get that.",
+  "file": "story-lonely-plains--03--ab575c0b3c.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-lonely-plains",
+  "i": 4,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "He'd ride off alone out here for hours. He said there was \"so great a charm in absolute solitude.\"",
+  "file": "story-lonely-plains--04--bd16b0c17c.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-lonely-plains",
+  "i": 5,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Not a lot of solitude in a car with you and your notecards.",
+  "file": "story-lonely-plains--05--afc81714f6.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-lonely-plains",
+  "i": 6,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "[laughs] You love the notecards.",
+  "file": "story-lonely-plains--06--41c5d91b13.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-stockman",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Was he actually any good at ranching? Or was he just rich?",
+  "file": "story-stockman--00--98061d5bf4.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-stockman",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Bit of both. But the other ranchers respected him. When they formed a stockmen's association in Medora in 1884, they elected him chairman.",
+  "file": "story-stockman--01--cb6350ef89.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-stockman",
+  "i": 2,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "The guy from New York.",
+  "file": "story-stockman--02--8c3fbc4d34.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-stockman",
+  "i": 3,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "The guy from New York. And he loved the work.",
+  "file": "story-stockman--03--a256f6f5da.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-stockman",
+  "i": 4,
+  "speaker": "Q",
+  "voiceId": 78,
+  "text": "I do not believe there ever was any life more attractive to a vigorous young fellow than life on a cattle ranch in those days.",
+  "file": "story-stockman--04--0decf4cd58.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-his-voice",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Want to hear something rare?",
+  "file": "story-his-voice--00--ee769eed07.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-his-voice",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Always.",
+  "file": "story-his-voice--01--e5390b0950.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-his-voice",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "This is Theodore Roosevelt's actual voice. Recorded in 1912. There are only a few recordings of him, and they're all scratchy speeches. But listen.",
+  "file": "story-his-voice--02--02f8ab7753.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-his-voice",
+  "i": 4,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Huh. Higher than I expected.",
+  "file": "story-his-voice--04--647956d39c.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-his-voice",
+  "i": 5,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Everybody says that.",
+  "file": "story-his-voice--05--065209f1b3.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-night-sky",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "If you're out here near sunset, stick around. The Badlands change at night.",
+  "file": "story-night-sky--00--b1add215ad.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-night-sky",
+  "i": 1,
+  "speaker": "Q",
+  "voiceId": 78,
+  "text": "The Bad Lands seem to be stranger and wilder than ever, the silvery rays turning the country into a kind of grim fairy-land.",
+  "file": "story-night-sky--01--d8f4ef2f83.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-night-sky",
+  "i": 2,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Grim fairy-land. That's a band name.",
+  "file": "story-night-sky--02--658bb5c65d.mp3",
+  "done": true
+ },
+ {
+  "clip": "story-night-sky",
+  "i": 3,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "[laughs] On a clear night you can see the Milky Way out here. And sometimes the northern lights. Roosevelt saw them from his ranch.",
+  "file": "story-night-sky--03--843cc7f0e1.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-bison",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Bison! Okay, here's the rule. Stay in the car and let them do their thing.",
+  "file": "wild-bison--00--ab4ad9df57.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-bison",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "If one's on the road, just wait. They have the right of way, and they'll move when they're ready.",
+  "file": "wild-bison--01--a936e1d361.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-bison",
+  "i": 2,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Watch the tail. If a bison lifts its tail straight up, it might be about to charge. Give it space.",
+  "file": "wild-bison--02--e6a9f110da.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-bison",
+  "i": 3,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "And no honking. Seriously. Just enjoy it.",
+  "file": "wild-bison--03--6e7b60f339.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-horses",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Wild horses! Oh, look at them.",
+  "file": "wild-horses--00--1fdf90d15a.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-horses",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "They usually travel in family groups — a stallion, a few mares, and the young ones. If you see one, look around. There are probably more nearby.",
+  "file": "wild-horses--01--e17ea70c5b.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-horses",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Stay in the car, or at least twenty-five yards back. And please don't try to feed them.",
+  "file": "wild-horses--02--13b4429bb6.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-prairie-dogs",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Prairie dogs. They're some of the most-watched animals in the park, and for good reason.",
+  "file": "wild-prairie-dogs--00--ffe81ce309.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-prairie-dogs",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "If you get out, stay on the road or sidewalk. Rattlesnakes sometimes hide in old burrows.",
+  "file": "wild-prairie-dogs--01--6751fcd7e1.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-prairie-dogs",
+  "i": 2,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "And no snacks. They bite, and their fleas can carry plague.",
+  "file": "wild-prairie-dogs--02--e5ced0f865.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-elk",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Elk! Nice. You don't always get to see them.",
+  "file": "wild-elk--00--3115a93632.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-elk",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "The big ones with the huge antlers are bulls. In September they're in the rut — they get cranky and loud. Keep plenty of distance.",
+  "file": "wild-elk--01--0bb6c58f8a.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-pronghorn",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Pronghorn! Those are a real treat here.",
+  "file": "wild-pronghorn--00--62a2a41fb8.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-pronghorn",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "They see almost all the way around their heads, and they can spot movement three miles away. So they've definitely already seen you.",
+  "file": "wild-pronghorn--01--b1bc749165.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-pronghorn",
+  "i": 2,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "And if they run, you'll see why they're the fastest land animal in North America.",
+  "file": "wild-pronghorn--02--56542ad777.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-deer",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Deer! Which kind?",
+  "file": "wild-deer--00--67c00358c0.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-deer",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Big ears and a skinny black-tipped tail — that's a mule deer. If it bounces away on all four legs at once, like a pogo stick, that's definitely a mule deer.",
+  "file": "wild-deer--01--bf78fc84f7.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-deer",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "And if it flashes a big white tail?",
+  "file": "wild-deer--02--1148fa1246.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-deer",
+  "i": 3,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "White-tailed deer. They like the river bottoms and the wooded draws.",
+  "file": "wild-deer--03--2cec3c25d3.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-coyote",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Coyote! They're the predator you're most likely to see in the park, and they're still sneaky.",
+  "file": "wild-coyote--00--33f6709201.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-coyote",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Check the prairie dog towns around dusk. And if you're out after dark, listen. They howl year-round.",
+  "file": "wild-coyote--01--92db67ad3f.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-birds",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Ooh, what is it?",
+  "file": "wild-birds--00--9e4241d83f.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-birds",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "If it's huge, dark and soaring, it could be a golden eagle. They hunt along the river valley.",
+  "file": "wild-birds--01--3572726355.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-birds",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "And if it's walking around looking like Thanksgiving —",
+  "file": "wild-birds--02--9d357190e4.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-birds",
+  "i": 3,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Wild turkey. They live here year-round. More than a hundred and eighty-five kinds of birds have been seen in this park.",
+  "file": "wild-birds--03--3de02a1779.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-snake",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Snake! Most snakes you'll see on the road are bullsnakes or racers. Not venomous.",
+  "file": "wild-snake--00--b4c2476946.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-snake",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "The only venomous one here is the prairie rattlesnake, and they're less common than they used to be.",
+  "file": "wild-snake--01--f2cf5eb613.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-snake",
+  "i": 2,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Either way, give it room and let it cross. They're just warming up on the pavement.",
+  "file": "wild-snake--02--8a7061a905.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-porcupine",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "A porcupine! Lucky.",
+  "file": "wild-porcupine--00--feef621615.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-porcupine",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "They spend a lot of time way up in the cottonwoods, eating bark. Ten to thirty pounds of quills.",
+  "file": "wild-porcupine--01--85de20208e.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-porcupine",
+  "i": 2,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Let it waddle on by.",
+  "file": "wild-porcupine--02--e54d545293.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-badger",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "A badger! That's a rare one. They're mostly out at night.",
+  "file": "wild-badger--00--a33cd72441.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-badger",
+  "i": 1,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Roosevelt respected them.",
+  "file": "wild-badger--01--35f6ec0faa.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-badger",
+  "i": 2,
+  "speaker": "Q",
+  "voiceId": 78,
+  "text": "A badger is a most desperate fighter, and an overmatch for a coyote...",
+  "file": "wild-badger--02--5ad566adc8.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-badger",
+  "i": 3,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Give it plenty of room. He wasn't kidding.",
+  "file": "wild-badger--03--e09da71312.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-traffic",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Just traffic? Somebody up ahead probably spotted something.",
+  "file": "wild-traffic--00--d6673a4674.mp3",
+  "done": true
+ },
+ {
+  "clip": "wild-traffic",
+  "i": 1,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Take your time. And if you want to stop and look, use a pull-off, not the middle of the road.",
+  "file": "wild-traffic--01--245426bffc.mp3",
+  "done": true
+ },
+ {
+  "clip": "sys-speed-1",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Easy there. We timed the stories for the speed limit. The faster you go, the more you miss.",
+  "file": "sys-speed-1--00--d38083612d.mp3",
+  "done": true
+ },
+ {
+  "clip": "sys-speed-2",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Little fast? Animals cross here all the time. Slowing down is how you actually see them.",
+  "file": "sys-speed-2--00--3ab906717a.mp3",
+  "done": true
+ },
+ {
+  "clip": "sys-speed-3",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Hey, speedy. Remember, a bison on the road always wins. Let's slow it down.",
+  "file": "sys-speed-3--00--cd2dd6f8fc.mp3",
+  "done": true
+ },
+ {
+  "clip": "sys-line-behind",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "If there's a line of cars behind you, find a pull-off and let them by. No rush. We're not going anywhere.",
+  "file": "sys-line-behind--00--3d5fc268eb.mp3",
+  "done": true
+ },
+ {
+  "clip": "sys-parked",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "Looks like you've stopped. Take your time — the screen has photos and more about where you are.",
+  "file": "sys-parked--00--0ed548711c.mp3",
+  "done": true
+ },
+ {
+  "clip": "sys-resume",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "And we're rolling. Here we go.",
+  "file": "sys-resume--00--3ead4f3053.mp3",
+  "done": true
+ },
+ {
+  "clip": "sys-spur-end",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "This is the end of the side road. Turn around when you're ready, and we'll pick right back up on the loop.",
+  "file": "sys-spur-end--00--5aee4cb682.mp3",
+  "done": true
+ },
+ {
+  "clip": "sys-off-route",
+  "i": 0,
+  "speaker": "N",
+  "voiceId": 78,
+  "text": "Looks like we've left the loop. No problem. Head back to the paved Scenic Loop Drive whenever you're ready, and we'll pick up where we left off.",
+  "file": "sys-off-route--00--f9d8271659.mp3",
+  "done": true
+ },
+ {
+  "clip": "sys-gps-weak",
+  "i": 0,
+  "speaker": "W",
+  "voiceId": 80,
+  "text": "We've lost the GPS for a second. Don't worry, everything's saved on your phone. We'll catch up as soon as we find you again.",
+  "file": "sys-gps-weak--00--63e3908f28.mp3",
+  "done": true
+ }
+]
