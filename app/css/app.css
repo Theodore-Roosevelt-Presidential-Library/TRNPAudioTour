@@ -193,3 +193,4 @@ dialog::backdrop{background:rgba(0,0,0,.6)}
   .gauge-now b{font-size:3.6rem}
 }
 .fine{font-size:.85rem;color:var(--sand-dim)}
+.tap-play{position:fixed;left:50%;top:40%;transform:translate(-50%,-50%);z-index:60;background:#E7805D;color:#25282A;border:0;border-radius:999px;padding:1em 1.6em;font:600 1.15rem/1.2 Oswald,sans-serif;letter-spacing:.02em;box-shadow:0 8px 30px rgba(0,0,0,.5);cursor:pointer}.tap-play[hidden]{display:none}

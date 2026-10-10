@@ -153,6 +153,7 @@ function limitHere() {
 // ------------------------------------------------------------------ audio
 const audioEl = new Audio(); audioEl.preload = 'auto';
 const sfxEl = new Audio();
+const SILENT = 'data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMAAAAAAAAAAAAAAA//tQAAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAACAAABIADAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV6urq6urq6urq6urq6urq6urq6urq6urq6v////////////////////////////////8AAAAATGF2YzU4LjEzAAAAAAAAAAAAAAAAJAAAAAAAAAAAASDs90hvAAAAAAAAAAAAAAAAAAAA//sQZAAP8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAETEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV';
 let ttsVoices = [];
 function loadVoices() {
   const all = (window.speechSynthesis && speechSynthesis.getVoices()) || [];
@@ -197,9 +198,24 @@ function playFile(job) {
     const t = audioEl.currentTime; const cue = (a.cues || []).filter(c => c.t <= t).pop();
     if (cue && cue !== job.cue) { job.cue = cue; job.lineIdx = cue.i; render.caption(job.clip.lines[cue.i]); }
   };
-  audioEl.onerror = () => { job.clip.audio = null; playLines(job); };
-  audioEl.play().catch(() => {});
+  audioEl.onerror = () => { if (job.cancelled) return; job.clip.audio = null; playLines(job); };
+  job.fileStarted = now();
+  audioEl.play().then(() => hideTapToPlay()).catch((e) => { if (e && e.name === 'NotAllowedError') showTapToPlay(); });
 }
+// The phone can pause our audio behind our back: a call, Siri, another app's voice prompt, a system
+// dialog. If narration should be playing but isn't, start it again; if the phone refuses, ask for a tap.
+function audioWatchdog() {
+  const job = S.current;
+  if (!job || job.cancelled || S.userPaused || TEST || !(job.clip.audio && job.clip.audio.file)) return;
+  if (!audioEl.paused || audioEl.ended) { job.stuckSince = 0; return; }
+  if (!job.stuckSince) { job.stuckSince = now(); return; }
+  if (now() - job.stuckSince < 2) return;
+  job.stuckSince = now();
+  log('audio-resume', { id: job.id });
+  audioEl.play().then(() => hideTapToPlay()).catch(() => showTapToPlay());
+}
+function showTapToPlay() { const b = $('tap-play'); if (b) b.hidden = false; }
+function hideTapToPlay() { const b = $('tap-play'); if (b) b.hidden = true; }
 function playLines(job) {
   const lines = job.clip.lines;
   const step = () => {
@@ -801,11 +817,13 @@ async function download(btn) {
 
 // ------------------------------------------------------------------ boot
 async function boot() {
-  const res = await fetch('data/tour.json'); S.tour = await res.json();
+  const V = (document.querySelector('meta[name="tour-version"]') || {}).content || '';
+  const res = await fetch('data/tour.json' + (V ? '?v=' + V : ''), { cache: 'no-cache' }); S.tour = await res.json();
+  const vl = $('app-version'); if (vl) vl.textContent = V ? 'Version ' + V : '';
   const R = S.tour.route;
   S.track = makeTrack(R.coords, R.cum);
   S.spurs = {}; for (const [k, sp] of Object.entries(S.tour.spurs)) S.spurs[k] = makeTrack(sp.coords, sp.cum);
-  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then(r => r.update()).catch(() => {});
   try { if (localStorage.getItem('trnp-dl') == S.tour.version) { $('btn-download').textContent = 'Downloaded'; } } catch (e) {}
 
   // picker buttons
@@ -844,16 +862,17 @@ async function boot() {
   if (q.get('wild') === '0') $('sim-wild').checked = false;
   if (q.get('speeder')) $('sim-speeder').checked = true;
   if (q.get('rate')) $('sim-rate').value = q.get('rate');
-  if (q.get('preview') || location.hash === '#preview') begin('sim');
+  // A phone only lets a page play sound after a tap, so outside of tests the preview waits for one.
+  if (q.get('preview') || location.hash === '#preview') { if (TEST) begin('sim'); else { $('btn-preview').classList.add('btn-go'); $('btn-preview').classList.remove('btn-quiet'); $('btn-preview').focus(); } }
 }
 
 function begin(mode) {
   S.mode = mode; S.started = true;
   $('start').hidden = true; $('dash').hidden = false;
-  // unlock audio on this tap (iOS)
-  audioEl.src = 'data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMAAAAAAAAAAAAAAA//tQAAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAACAAABIADAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV6urq6urq6urq6urq6urq6urq6urq6urq6v////////////////////////////////8AAAAATGF2YzU4LjEzAAAAAAAAAAAAAAAAJAAAAAAAAAAAASDs90hvAAAAAAAAAAAAAAAAAAAA//sQZAAP8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAETEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV';
-  audioEl.play().catch(() => {}); sfxEl.play().catch(() => {});
-  if (window.speechSynthesis) { const u = new SpeechSynthesisUtterance(' '); speechSynthesis.speak(u); }
+  // unlock audio on this tap (iOS). The narration element is unlocked by the welcome clip itself, which
+  // starts inside this same tap. Only the sound-effects player needs a silent warm-up.
+  // (No speech-synthesis warm-up: on iPhone it grabs the audio session and silences the narration.)
+  sfxEl.muted = true; sfxEl.src = SILENT; sfxEl.play().then(() => { sfxEl.pause(); sfxEl.muted = false; }).catch(() => { sfxEl.muted = false; });
   keepAwake();
   render.mapInit(); render.ribbonTicks();
   render.setPhotos(S.tour.clips.welcome.images);
@@ -867,7 +886,9 @@ function begin(mode) {
     startGps();
     playClip('welcome', { priority: 9, onDone: () => { if (S.speed <= CFG.parkSpeed) { const h = nearestStop(); if (h && h.st.id === 'visitor-center' && h.dist < 400) enqueue('vc-cabin', 4); } } });
   }
-  setInterval(() => { if (S.mode === 'gps' && S.pos) tick(); else pump(); }, 1000);
+  setInterval(() => { if (S.mode === 'gps' && S.pos) tick(); else pump(); audioWatchdog(); }, 1000);
+  $('tap-play').onclick = () => { hideTapToPlay(); if (S.current) audioEl.play().catch(showTapToPlay); else pump(); };
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') audioWatchdog(); });
 }
 
 boot();

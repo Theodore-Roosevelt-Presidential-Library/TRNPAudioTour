@@ -14,11 +14,12 @@
 <meta property="og:description" content="A free GPS driving audio tour of Theodore Roosevelt National Park's South Unit, from the Theodore Roosevelt Presidential Library.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="media/photos/scenic-loop-drive-scenery.jpg">
+<meta name="tour-version" content="42e4d0ec">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/icon-180.png">
-<link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="fonts/fonts.css?v=42e4d0ec">
+<link rel="stylesheet" href="css/app.css?v=42e4d0ec">
 </head>
 <body>
 
@@ -63,6 +64,7 @@
 
 <!-- ============ DASHBOARD ============ -->
 <main id="dash" class="screen dash" hidden>
+  <button class="tap-play" id="tap-play" hidden>▶ Tap to keep the stories playing</button>
   <div class="stage" id="stage">
     <div class="photo" id="photo"><div class="photo-fill" id="photo-fill"></div><img id="photo-a" alt=""><img id="photo-b" alt=""></div>
     <div class="stage-shade"></div>
@@ -135,6 +137,7 @@
       <button class="btn btn-quiet" data-act="skip">Skip this story</button>
       <button class="btn btn-quiet" data-act="tally">Wildlife count</button>
       <button class="btn btn-quiet" data-act="credits">Photo &amp; sound credits</button>
+      <p class="fine app-version" id="app-version"></p>
       <button class="btn btn-quiet" data-act="end">End the tour</button>
       <div class="sim-ctl" id="sim-ctl" hidden>
         <h4>Preview controls</h4>
@@ -152,6 +155,6 @@
 
 <dialog id="dlg"><div id="dlg-body"></div><form method="dialog"><button class="btn">Close</button></form></dialog>
 
-<script src="js/app.js"></script>
+<script src="js/app.js?v=42e4d0ec"></script>
 </body>
 </html>
